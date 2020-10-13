@@ -1,0 +1,1215 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f99623f0150, pid=7583, tid=0x00007f9962b83740
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_261-b12) (build 1.8.0_261-b12)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.261-b12 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [libpython3.6m.so.1.0+0x161150]  PyModule_GetDict+0x0
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000003c5c800):  JavaThread "main" [_thread_in_native, id=7583, stack(0x00007fffb50d4000,0x00007fffb51d4000)]
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x0000000000000008
+
+Registers:
+RAX=0x0000000000000000, RBX=0x0000000000000000, RCX=0x0000000000000003, RDX=0x0000000000000006
+RSP=0x00007fffb51d1268, RBP=0x00007fffb51d1280, RSI=0x0000000000000000, RDI=0x0000000000000000
+R8 =0x0000000000000014, R9 =0x0000000000000002, R10=0x00000000000004bd, R11=0x00007f99623f0150
+R12=0x0000000000400840, R13=0x00007fffb51d1360, R14=0x0000000000000000, R15=0x0000000000000000
+RIP=0x00007f99623f0150, EFLAGS=0x0000000000010202, CSGSFS=0x002b000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007fffb51d1268)
+0x00007fffb51d1268:   000000000040097b 0000000000000000
+0x00007fffb51d1278:   0000000000000000 00000000004009e0
+0x00007fffb51d1288:   00007f9961b63840 0000000000011c00
+0x00007fffb51d1298:   00007fffb51d1368 00000001b51d1378
+0x00007fffb51d12a8:   0000000000400936 0000000000000000
+0x00007fffb51d12b8:   8e51100303cff95c 0000000000400840
+0x00007fffb51d12c8:   00007fffb51d1360 0000000000000000
+0x00007fffb51d12d8:   0000000000000000 71ae7ab9352ff95c
+0x00007fffb51d12e8:   7163d3ef7ffff95c 0000000000000000
+0x00007fffb51d12f8:   0000000000000000 0000000000000000
+0x00007fffb51d1308:   00007fffb51d1378 00007f9962bae168
+0x00007fffb51d1318:   00007f996299780b 0000000000000000
+0x00007fffb51d1328:   0000000000000000 0000000000400840
+0x00007fffb51d1338:   00007fffb51d1360 0000000000000000
+0x00007fffb51d1348:   0000000000400869 00007fffb51d1358
+0x00007fffb51d1358:   000000000000001c 0000000000000001
+0x00007fffb51d1368:   00007fffb51d3083 0000000000000000
+0x00007fffb51d1378:   00007fffb51d3089 00007fffb51d3094
+0x00007fffb51d1388:   00007fffb51d30a5 00007fffb51d30bb
+0x00007fffb51d1398:   00007fffb51d30de 00007fffb51d30ed
+0x00007fffb51d13a8:   00007fffb51d3122 00007fffb51d3132
+0x00007fffb51d13b8:   00007fffb51d3146 00007fffb51d315d
+0x00007fffb51d13c8:   00007fffb51d3180 00007fffb51d31c4
+0x00007fffb51d13d8:   00007fffb51d31db 00007fffb51d3208
+0x00007fffb51d13e8:   00007fffb51d3231 00007fffb51d323f
+0x00007fffb51d13f8:   00007fffb51d37c7 00007fffb51d37da
+0x00007fffb51d1408:   00007fffb51d37f5 00007fffb51d381e
+0x00007fffb51d1418:   00007fffb51d3851 00007fffb51d38af
+0x00007fffb51d1428:   00007fffb51d38c1 00007fffb51d38f8
+0x00007fffb51d1438:   00007fffb51d394b 00007fffb51d398f
+0x00007fffb51d1448:   00007fffb51d39b2 00007fffb51d39c9
+0x00007fffb51d1458:   00007fffb51d3aad 00007fffb51d3ad2 
+
+Instructions: (pc=0x00007f99623f0150)
+0x00007f99623f0130:   39 e8 4a 65 06 00 83 c8 ff eb da e9 e8 8f f2 ff
+0x00007f99623f0140:   e9 07 90 f2 ff 90 66 2e 0f 1f 84 00 00 00 00 00
+0x00007f99623f0150:   48 8b 47 08 48 3b 05 45 85 4c 00 0f 85 40 90 f2
+0x00007f99623f0160:   ff 48 8b 47 10 c3 66 2e 0f 1f 84 00 00 00 00 00 
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX=0x0000000000000000 is an unknown value
+RCX=0x0000000000000003 is an unknown value
+RDX=0x0000000000000006 is an unknown value
+RSP=0x00007fffb51d1268 is pointing into the stack for thread: 0x0000000003c5c800
+RBP=0x00007fffb51d1280 is pointing into the stack for thread: 0x0000000003c5c800
+RSI=0x0000000000000000 is an unknown value
+RDI=0x0000000000000000 is an unknown value
+R8 =0x0000000000000014 is an unknown value
+R9 =0x0000000000000002 is an unknown value
+R10=0x00000000000004bd is an unknown value
+R11=0x00007f99623f0150: PyModule_GetDict+0 in /usr/lib/x86_64-linux-gnu/libpython3.6m.so.1.0 at 0x00007f996228f000
+R12=0x0000000000400840: <offset 0x840> in ./run at 0x0000000000400000
+R13=0x00007fffb51d1360 is pointing into the stack for thread: 0x0000000003c5c800
+R14=0x0000000000000000 is an unknown value
+R15=0x0000000000000000 is an unknown value
+
+
+Stack: [0x00007fffb50d4000,0x00007fffb51d4000],  sp=0x00007fffb51d1268,  free space=1012k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libpython3.6m.so.1.0+0x161150]  PyModule_GetDict+0x0
+C  [libc.so.6+0x20840]  __libc_start_main+0xf0
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0x0000000005ac0000 JavaThread "Python Reference Queue" daemon [_thread_blocked, id=7619, stack(0x00007f990d7aa000,0x00007f990d8ab000)]
+  0x0000000005a8a000 JavaThread "Service Thread" daemon [_thread_blocked, id=7617, stack(0x00007f990d9ac000,0x00007f990daad000)]
+  0x0000000005a7f000 JavaThread "C1 CompilerThread3" daemon [_thread_in_native, id=7616, stack(0x00007f990daad000,0x00007f990dbae000)]
+  0x0000000005a7c800 JavaThread "C2 CompilerThread2" daemon [_thread_blocked, id=7615, stack(0x00007f990dbae000,0x00007f990dcaf000)]
+  0x0000000005a7b000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=7614, stack(0x00007f990dcaf000,0x00007f990ddb0000)]
+  0x0000000005a78000 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=7613, stack(0x00007f990ddb0000,0x00007f990deb1000)]
+  0x0000000005a76800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=7612, stack(0x00007f990deb1000,0x00007f990dfb2000)]
+  0x0000000005a46800 JavaThread "Finalizer" daemon [_thread_blocked, id=7611, stack(0x00007f990dfb2000,0x00007f990e0b3000)]
+  0x0000000005a42000 JavaThread "Reference Handler" daemon [_thread_blocked, id=7610, stack(0x00007f990e0b3000,0x00007f990e1b4000)]
+=>0x0000000003c5c800 JavaThread "main" [_thread_in_native, id=7583, stack(0x00007fffb50d4000,0x00007fffb51d4000)]
+
+Other Threads:
+  0x0000000005a38000 VMThread [stack: 0x00007f990e1b4000,0x00007f990e2b5000] [id=7609]
+  0x0000000005a8d000 WatcherThread [stack: 0x00007f990d8ab000,0x00007f990d9ac000] [id=7618]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x0000000085a00000, size: 1958 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x0000000100000000
+
+Heap:
+ PSYoungGen      total 36864K, used 3174K [0x00000000d7380000, 0x00000000d9c80000, 0x0000000100000000)
+  eden space 31744K, 10% used [0x00000000d7380000,0x00000000d7699a10,0x00000000d9280000)
+  from space 5120K, 0% used [0x00000000d9280000,0x00000000d9280000,0x00000000d9780000)
+  to   space 5120K, 0% used [0x00000000d9780000,0x00000000d9780000,0x00000000d9c80000)
+ ParOldGen       total 84992K, used 596K [0x0000000085a00000, 0x000000008ad00000, 0x00000000d7380000)
+  object space 84992K, 0% used [0x0000000085a00000,0x0000000085a95058,0x000000008ad00000)
+ Metaspace       used 3525K, capacity 4676K, committed 4864K, reserved 1056768K
+  class space    used 383K, capacity 427K, committed 512K, reserved 1048576K
+
+Card table byte_map: [0x00007f990faf9000,0x00007f990fecd000] byte_map_base: 0x00007f990f6cc000
+
+Marking Bits: (ParMarkBitMap*) 0x00007f99210ff0c0
+ Begin Bits: [0x00007f99042d0000, 0x00007f9906168000)
+ End Bits:   [0x00007f9906168000, 0x00007f9908000000)
+
+Polling page: 0x00007f9962b8c000
+
+CodeCache: size=245760Kb used=1705Kb max_used=1705Kb free=244054Kb
+ bounds [0x00007f991028d000, 0x00007f99104fd000, 0x00007f991f28d000]
+ total_blobs=510 nmethods=255 adapters=169
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 0.118 Thread 0x0000000005a7f000 nmethod 244 0x00007f991042be10 code [0x00007f991042c100, 0x00007f991042d818]
+Event: 0.118 Thread 0x0000000005a7f000  250       3       org.jpype.manager.MethodResolution::isCovered (48 bytes)
+Event: 0.118 Thread 0x0000000005a7f000 nmethod 250 0x00007f991042df50 code [0x00007f991042e100, 0x00007f991042e688]
+Event: 0.118 Thread 0x0000000005a7f000  251       3       org.jpype.manager.MethodResolution::sortMethods (218 bytes)
+Event: 0.119 Thread 0x0000000005a7f000 nmethod 251 0x00007f991042ef90 code [0x00007f991042f3e0, 0x00007f99104316d8]
+Event: 0.119 Thread 0x0000000005a7f000  253       1       java.lang.Class$MethodArray::get (7 bytes)
+Event: 0.119 Thread 0x0000000005a7f000 nmethod 253 0x00007f9910432a50 code [0x00007f9910432ba0, 0x00007f9910432cd0]
+Event: 0.119 Thread 0x0000000005a7f000  256       3       org.jpype.manager.MethodResolution::isAssignableTo (71 bytes)
+Event: 0.119 Thread 0x0000000005a7f000 nmethod 256 0x00007f9910432d90 code [0x00007f9910432f60, 0x00007f99104336a8]
+Event: 0.119 Thread 0x0000000005a7f000  255       3       java.util.TreeMap::fixAfterInsertion (267 bytes)
+
+GC Heap History (4 events):
+Event: 0.080 GC heap before
+{Heap before GC invocations=1 (full 0):
+ PSYoungGen      total 36864K, used 2539K [0x00000000d7380000, 0x00000000d9c80000, 0x0000000100000000)
+  eden space 31744K, 8% used [0x00000000d7380000,0x00000000d75faf10,0x00000000d9280000)
+  from space 5120K, 0% used [0x00000000d9780000,0x00000000d9780000,0x00000000d9c80000)
+  to   space 5120K, 0% used [0x00000000d9280000,0x00000000d9280000,0x00000000d9780000)
+ ParOldGen       total 84992K, used 0K [0x0000000085a00000, 0x000000008ad00000, 0x00000000d7380000)
+  object space 84992K, 0% used [0x0000000085a00000,0x0000000085a00000,0x000000008ad00000)
+ Metaspace       used 3220K, capacity 4670K, committed 4864K, reserved 1056768K
+  class space    used 360K, capacity 426K, committed 512K, reserved 1048576K
+Event: 0.081 GC heap after
+Heap after GC invocations=1 (full 0):
+ PSYoungGen      total 36864K, used 784K [0x00000000d7380000, 0x00000000d9c80000, 0x0000000100000000)
+  eden space 31744K, 0% used [0x00000000d7380000,0x00000000d7380000,0x00000000d9280000)
+  from space 5120K, 15% used [0x00000000d9280000,0x00000000d9344010,0x00000000d9780000)
+  to   space 5120K, 0% used [0x00000000d9780000,0x00000000d9780000,0x00000000d9c80000)
+ ParOldGen       total 84992K, used 8K [0x0000000085a00000, 0x000000008ad00000, 0x00000000d7380000)
+  object space 84992K, 0% used [0x0000000085a00000,0x0000000085a02000,0x000000008ad00000)
+ Metaspace       used 3220K, capacity 4670K, committed 4864K, reserved 1056768K
+  class space    used 360K, capacity 426K, committed 512K, reserved 1048576K
+}
+Event: 0.081 GC heap before
+{Heap before GC invocations=2 (full 1):
+ PSYoungGen      total 36864K, used 784K [0x00000000d7380000, 0x00000000d9c80000, 0x0000000100000000)
+  eden space 31744K, 0% used [0x00000000d7380000,0x00000000d7380000,0x00000000d9280000)
+  from space 5120K, 15% used [0x00000000d9280000,0x00000000d9344010,0x00000000d9780000)
+  to   space 5120K, 0% used [0x00000000d9780000,0x00000000d9780000,0x00000000d9c80000)
+ ParOldGen       total 84992K, used 8K [0x0000000085a00000, 0x000000008ad00000, 0x00000000d7380000)
+  object space 84992K, 0% used [0x0000000085a00000,0x0000000085a02000,0x000000008ad00000)
+ Metaspace       used 3220K, capacity 4670K, committed 4864K, reserved 1056768K
+  class space    used 360K, capacity 426K, committed 512K, reserved 1048576K
+Event: 0.084 GC heap after
+Heap after GC invocations=2 (full 1):
+ PSYoungGen      total 36864K, used 0K [0x00000000d7380000, 0x00000000d9c80000, 0x0000000100000000)
+  eden space 31744K, 0% used [0x00000000d7380000,0x00000000d7380000,0x00000000d9280000)
+  from space 5120K, 0% used [0x00000000d9280000,0x00000000d9280000,0x00000000d9780000)
+  to   space 5120K, 0% used [0x00000000d9780000,0x00000000d9780000,0x00000000d9c80000)
+ ParOldGen       total 84992K, used 596K [0x0000000085a00000, 0x000000008ad00000, 0x00000000d7380000)
+  object space 84992K, 0% used [0x0000000085a00000,0x0000000085a95058,0x000000008ad00000)
+ Metaspace       used 3220K, capacity 4670K, committed 4864K, reserved 1056768K
+  class space    used 360K, capacity 426K, committed 512K, reserved 1048576K
+}
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (4 events):
+Event: 0.015 Thread 0x0000000003c5c800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.defineClass(Ljava/lang/String;[BII)Ljava/lang/Class; name or signature does not match> (0x00000000d7387cc0) thrown at [/scratch/jenkins/workspace/8-2-build-linux-amd64/jdk8u261/295/hotspot
+Event: 0.015 Thread 0x0000000003c5c800 Exception <a 'java/lang/NoSuchMethodError': Method sun.misc.Unsafe.prefetchRead(Ljava/lang/Object;J)V name or signature does not match> (0x00000000d7387fa8) thrown at [/scratch/jenkins/workspace/8-2-build-linux-amd64/jdk8u261/295/hotspot/src/share/vm/prim
+Event: 0.062 Thread 0x0000000003c5c800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d75499a0) thrown at [/scratch/jenkins/workspace/8-2-build-linux-amd64/jdk8u261/295/hotspot/src/share/vm/prims/jvm.cpp, line 1512]
+Event: 0.062 Thread 0x0000000003c5c800 Exception <a 'java/security/PrivilegedActionException'> (0x00000000d7549bb0) thrown at [/scratch/jenkins/workspace/8-2-build-linux-amd64/jdk8u261/295/hotspot/src/share/vm/prims/jvm.cpp, line 1512]
+
+Events (10 events):
+Event: 0.118 loading class java/lang/Long$LongCache
+Event: 0.118 loading class java/lang/Long$LongCache done
+Event: 0.119 loading class org/jpype/JPypeKeywords
+Event: 0.119 loading class org/jpype/JPypeKeywords done
+Event: 0.119 loading class java/util/HashSet
+Event: 0.119 loading class java/util/HashSet done
+Event: 0.119 loading class java/util/AbstractList$Itr
+Event: 0.119 loading class java/util/AbstractList$Itr done
+Event: 0.119 loading class WriteAST
+Event: 0.119 loading class WriteAST done
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 08:04 38931378                           /home/tangsong/CLionProjects/InvokeDDPGtest/run
+00600000-00601000 r--p 00000000 08:04 38931378                           /home/tangsong/CLionProjects/InvokeDDPGtest/run
+00601000-00602000 rw-p 00001000 08:04 38931378                           /home/tangsong/CLionProjects/InvokeDDPGtest/run
+01c58000-05d7e000 rw-p 00000000 00:00 0                                  [heap]
+85a00000-8ad00000 rw-p 00000000 00:00 0 
+8ad00000-d7380000 ---p 00000000 00:00 0 
+d7380000-d9c80000 rw-p 00000000 00:00 0 
+d9c80000-100000000 ---p 00000000 00:00 0 
+100000000-100080000 rw-p 00000000 00:00 0 
+100080000-140000000 ---p 00000000 00:00 0 
+7f98a8000000-7f98a8021000 rw-p 00000000 00:00 0 
+7f98a8021000-7f98ac000000 ---p 00000000 00:00 0 
+7f98b0000000-7f98b0021000 rw-p 00000000 00:00 0 
+7f98b0021000-7f98b4000000 ---p 00000000 00:00 0 
+7f98b4000000-7f98b4021000 rw-p 00000000 00:00 0 
+7f98b4021000-7f98b8000000 ---p 00000000 00:00 0 
+7f98b8000000-7f98b81ad000 rw-p 00000000 00:00 0 
+7f98b81ad000-7f98bc000000 ---p 00000000 00:00 0 
+7f98bc000000-7f98bc11d000 rw-p 00000000 00:00 0 
+7f98bc11d000-7f98c0000000 ---p 00000000 00:00 0 
+7f98c0000000-7f98c01f7000 rw-p 00000000 00:00 0 
+7f98c01f7000-7f98c4000000 ---p 00000000 00:00 0 
+7f98c4000000-7f98c41b0000 rw-p 00000000 00:00 0 
+7f98c41b0000-7f98c8000000 ---p 00000000 00:00 0 
+7f98c8000000-7f98c8021000 rw-p 00000000 00:00 0 
+7f98c8021000-7f98cc000000 ---p 00000000 00:00 0 
+7f98cc000000-7f98cc021000 rw-p 00000000 00:00 0 
+7f98cc021000-7f98d0000000 ---p 00000000 00:00 0 
+7f98d0000000-7f98d0021000 rw-p 00000000 00:00 0 
+7f98d0021000-7f98d4000000 ---p 00000000 00:00 0 
+7f98d4000000-7f98d4021000 rw-p 00000000 00:00 0 
+7f98d4021000-7f98d8000000 ---p 00000000 00:00 0 
+7f98d8000000-7f98d8021000 rw-p 00000000 00:00 0 
+7f98d8021000-7f98dc000000 ---p 00000000 00:00 0 
+7f98dc000000-7f98dc021000 rw-p 00000000 00:00 0 
+7f98dc021000-7f98e0000000 ---p 00000000 00:00 0 
+7f98e0000000-7f98e0021000 rw-p 00000000 00:00 0 
+7f98e0021000-7f98e4000000 ---p 00000000 00:00 0 
+7f98e8000000-7f98e8021000 rw-p 00000000 00:00 0 
+7f98e8021000-7f98ec000000 ---p 00000000 00:00 0 
+7f98f0000000-7f98f0021000 rw-p 00000000 00:00 0 
+7f98f0021000-7f98f4000000 ---p 00000000 00:00 0 
+7f98f8000000-7f98f8021000 rw-p 00000000 00:00 0 
+7f98f8021000-7f98fc000000 ---p 00000000 00:00 0 
+7f9900000000-7f9900021000 rw-p 00000000 00:00 0 
+7f9900021000-7f9904000000 ---p 00000000 00:00 0 
+7f99042d0000-7f9908000000 rw-p 00000000 00:00 0 
+7f9908000000-7f9908021000 rw-p 00000000 00:00 0 
+7f9908021000-7f990c000000 ---p 00000000 00:00 0 
+7f990d76a000-7f990d7aa000 rw-p 00000000 00:00 0 
+7f990d7aa000-7f990d7ad000 ---p 00000000 00:00 0 
+7f990d7ad000-7f990d8ab000 rw-p 00000000 00:00 0 
+7f990d8ab000-7f990d8ac000 ---p 00000000 00:00 0 
+7f990d8ac000-7f990d9ac000 rw-p 00000000 00:00 0 
+7f990d9ac000-7f990d9af000 ---p 00000000 00:00 0 
+7f990d9af000-7f990daad000 rw-p 00000000 00:00 0 
+7f990daad000-7f990dab0000 ---p 00000000 00:00 0 
+7f990dab0000-7f990dbae000 rw-p 00000000 00:00 0 
+7f990dbae000-7f990dbb1000 ---p 00000000 00:00 0 
+7f990dbb1000-7f990dcaf000 rw-p 00000000 00:00 0 
+7f990dcaf000-7f990dcb2000 ---p 00000000 00:00 0 
+7f990dcb2000-7f990ddb0000 rw-p 00000000 00:00 0 
+7f990ddb0000-7f990ddb3000 ---p 00000000 00:00 0 
+7f990ddb3000-7f990deb1000 rw-p 00000000 00:00 0 
+7f990deb1000-7f990deb4000 ---p 00000000 00:00 0 
+7f990deb4000-7f990dfb2000 rw-p 00000000 00:00 0 
+7f990dfb2000-7f990dfb5000 ---p 00000000 00:00 0 
+7f990dfb5000-7f990e0b3000 rw-p 00000000 00:00 0 
+7f990e0b3000-7f990e0b6000 ---p 00000000 00:00 0 
+7f990e0b6000-7f990e1b4000 rw-p 00000000 00:00 0 
+7f990e1b4000-7f990e1b5000 ---p 00000000 00:00 0 
+7f990e1b5000-7f990e2b5000 rw-p 00000000 00:00 0 
+7f990e2b5000-7f990e491000 r--s 03e04000 08:02 685580                     /usr/local/bin/jdk1.8.0_261/jre/lib/rt.jar
+7f990e491000-7f990e8d1000 rw-p 00000000 00:00 0 
+7f990e8d1000-7f990ec91000 ---p 00000000 00:00 0 
+7f990ec91000-7f990f064000 rw-p 00000000 00:00 0 
+7f990f064000-7f990f065000 ---p 00000000 00:00 0 
+7f990f065000-7f990f165000 rw-p 00000000 00:00 0 
+7f990f165000-7f990f166000 ---p 00000000 00:00 0 
+7f990f166000-7f990f266000 rw-p 00000000 00:00 0 
+7f990f266000-7f990f267000 ---p 00000000 00:00 0 
+7f990f267000-7f990f367000 rw-p 00000000 00:00 0 
+7f990f367000-7f990f368000 ---p 00000000 00:00 0 
+7f990f368000-7f990f468000 rw-p 00000000 00:00 0 
+7f990f468000-7f990f469000 ---p 00000000 00:00 0 
+7f990f469000-7f990f569000 rw-p 00000000 00:00 0 
+7f990f569000-7f990f56a000 ---p 00000000 00:00 0 
+7f990f56a000-7f990f66a000 rw-p 00000000 00:00 0 
+7f990f66a000-7f990f66b000 ---p 00000000 00:00 0 
+7f990f66b000-7f990f76b000 rw-p 00000000 00:00 0 
+7f990f76b000-7f990f76c000 ---p 00000000 00:00 0 
+7f990f76c000-7f990f896000 rw-p 00000000 00:00 0 
+7f990f896000-7f990faf9000 ---p 00000000 00:00 0 
+7f990faf9000-7f990fb23000 rw-p 00000000 00:00 0 
+7f990fb23000-7f990fd85000 ---p 00000000 00:00 0 
+7f990fd85000-7f990fd9b000 rw-p 00000000 00:00 0 
+7f990fd9b000-7f990fecc000 ---p 00000000 00:00 0 
+7f990fecc000-7f990fed7000 rw-p 00000000 00:00 0 
+7f990fed7000-7f991028d000 ---p 00000000 00:00 0 
+7f991028d000-7f99104fd000 rwxp 00000000 00:00 0 
+7f99104fd000-7f991f28d000 ---p 00000000 00:00 0 
+7f991f28d000-7f991f2a8000 r-xp 00000000 08:02 308508                     /usr/local/bin/jdk1.8.0_261/jre/lib/amd64/libzip.so
+7f991f2a8000-7f991f4a7000 ---p 0001b000 08:02 308508                     /usr/local/bin/jdk1.8.0_261/jre/lib/amd64/libzip.so
+7f991f4a7000-7f991f4a8000 r--p 0001a000 08:02 308508                     /usr/local/bin/jdk1.8.0_261/jre/lib/amd64/libzip.so
+7f991f4a8000-7f991f4a9000 rw-p 0001b000 08:02 308508                     /usr/local/bin/jdk1.8.0_261/jre/lib/amd64/libzip.so
+7f991f4a9000-7f991f4b4000 r-xp 00000000 08:02 527575                     /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f991f4b4000-7f991f6b3000 ---p 0000b000 08:02 527575                     /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f991f6b3000-7f991f6b4000 r--p 0000a000 08:02 527575                     /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f991f6b4000-7f991f6b5000 rw-p 0000b000 08:02 527575                     /lib/x86_64-linux-gnu/libnss_files-2.23.so
+7f991f6b5000-7f991f6bb000 rw-p 00000000 00:00 0 
+7f991f6bb000-7f991f6c6000 r-xp 00000000 08:02 527585                     /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f991f6c6000-7f991f8c5000 ---p 0000b000 08:02 527585                     /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f991f8c5000-7f991f8c6000 r--p 0000a000 08:02 527585                     /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f991f8c6000-7f991f8c7000 rw-p 0000b000 08:02 527585                     /lib/x86_64-linux-gnu/libnss_nis-2.23.so
+7f991f8c7000-7f991f8dd000 r-xp 00000000 08:02 527569                     /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f991f8dd000-7f991fadc000 ---p 00016000 08:02 527569                     /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f991fadc000-7f991fadd000 r--p 00015000 08:02 527569                     /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f991fadd000-7f991fade000 rw-p 00016000 08:02 527569                     /lib/x86_64-linux-gnu/libnsl-2.23.so
+7f991fade000-7f991fae0000 rw-p 00000000 00:00 0 
+7f991fae0000-7f991fae8000 r-xp 00000000 08:02 527571                     /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f991fae8000-7f991fce7000 ---p 00008000 08:02 527571                     /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f991fce7000-7f991fce8000 r--p 00007000 08:02 527571                     /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f991fce8000-7f991fce9000 rw-p 00008000 08:02 527571                     /lib/x86_64-linux-gnu/libnss_compat-2.23.so
+7f991fce9000-7f991fd15000 r-xp 00000000 08:02 308519                     /usr/local/bin/jdk1.8.0_261/jre/lib/amd64/libjava.so
+7f991fd15000-7f991ff15000 ---p 0002c000 08:02 308519                     /usr/local/bin/jdk1.8.0_261/jre/lib/amd64/libjava.so
+7f991ff15000-7f991ff16000 r--p 0002c000 08:02 308519                     /usr/local/bin/jdk1.8.0_261/jre/lib/amd64/libjava.so
+7f991ff16000-7f991ff18000 rw-p 0002d000 08:02 308519                     /usr/local/bin/jdk1.8.0_261/jre/lib/amd64/libjava.so
+7f991ff18000-7f991ff25000 r-xp 00000000 08:02 308520                     /usr/local/bin/jdk1.8.0_261/jre/lib/amd64/libverify.so
+7f991ff25000-7f9920124000 ---p 0000d000 08:02 308520                     /usr/local/bin/jdk1.8.0_261/jre/lib/amd64/libverify.so
+7f9920124000-7f9920126000 r--p 0000c000 08:02 308520                     /usr/local/bin/jdk1.8.0_261/jre/lib/amd64/libverify.so
+7f9920126000-7f9920127000 rw-p 0000e000 08:02 308520                     /usr/local/bin/jdk1.8.0_261/jre/lib/amd64/libverify.so
+7f9920127000-7f9920e1b000 r-xp 00000000 08:02 308486                     /usr/local/bin/jdk1.8.0_261/jre/lib/amd64/server/libjvm.so
+7f9920e1b000-7f992101a000 ---p 00cf4000 08:02 308486                     /usr/local/bin/jdk1.8.0_261/jre/lib/amd64/server/libjvm.so
+7f992101a000-7f99210b0000 r--p 00cf3000 08:02 308486                     /usr/local/bin/jdk1.8.0_261/jre/lib/amd64/server/libjvm.so
+7f99210b0000-7f99210e1000 rw-p 00d89000 08:02 308486                     /usr/local/bin/jdk1.8.0_261/jre/lib/amd64/server/libjvm.so
+7f99210e1000-7f992115c000 rw-p 00000000 00:00 0 
+7f992115c000-7f9921203000 r-xp 00000000 08:04 40656791                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/_jpype.cpython-36m-x86_64-linux-gnu.so
+7f9921203000-7f9921403000 ---p 000a7000 08:04 40656791                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/_jpype.cpython-36m-x86_64-linux-gnu.so
+7f9921403000-7f9921407000 r--p 000a7000 08:04 40656791                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/_jpype.cpython-36m-x86_64-linux-gnu.so
+7f9921407000-7f9921425000 rw-p 000ab000 08:04 40656791                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/_jpype.cpython-36m-x86_64-linux-gnu.so
+7f9921425000-7f9921a25000 rw-p 00000000 00:00 0 
+7f9921a25000-7f9921ab2000 r-xp 00000000 08:04 41813151                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/linalg/cython_lapack.cpython-36m-x86_64-linux-gnu.so
+7f9921ab2000-7f9921cb1000 ---p 0008d000 08:04 41813151                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/linalg/cython_lapack.cpython-36m-x86_64-linux-gnu.so
+7f9921cb1000-7f9921cb5000 rw-p 0008c000 08:04 41813151                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/linalg/cython_lapack.cpython-36m-x86_64-linux-gnu.so
+7f9921cb5000-7f9921cca000 rw-p 00091000 08:04 41813151                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/linalg/cython_lapack.cpython-36m-x86_64-linux-gnu.so
+7f9921cca000-7f9921cff000 r-xp 00000000 08:04 41813131                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/linalg/cython_blas.cpython-36m-x86_64-linux-gnu.so
+7f9921cff000-7f9921eff000 ---p 00035000 08:04 41813131                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/linalg/cython_blas.cpython-36m-x86_64-linux-gnu.so
+7f9921eff000-7f9921f09000 rw-p 00035000 08:04 41813131                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/linalg/cython_blas.cpython-36m-x86_64-linux-gnu.so
+7f9921f09000-7f9921f4f000 r-xp 00000000 08:04 41813155                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/linalg/_decomp_update.cpython-36m-x86_64-linux-gnu.so
+7f9921f4f000-7f992214f000 ---p 00046000 08:04 41813155                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/linalg/_decomp_update.cpython-36m-x86_64-linux-gnu.so
+7f992214f000-7f9922155000 rw-p 00046000 08:04 41813155                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/linalg/_decomp_update.cpython-36m-x86_64-linux-gnu.so
+7f9922155000-7f9922156000 rw-p 00000000 00:00 0 
+7f9922156000-7f9922187000 r-xp 00000000 08:04 41813136                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/linalg/_solve_toeplitz.cpython-36m-x86_64-linux-gnu.so
+7f9922187000-7f9922387000 ---p 00031000 08:04 41813136                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/linalg/_solve_toeplitz.cpython-36m-x86_64-linux-gnu.so
+7f9922387000-7f992238b000 rw-p 00031000 08:04 41813136                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/linalg/_solve_toeplitz.cpython-36m-x86_64-linux-gnu.so
+7f992238b000-7f992238c000 rw-p 00000000 00:00 0 
+7f992238c000-7f9922399000 r-xp 00000000 08:04 41813164                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/linalg/_flinalg.cpython-36m-x86_64-linux-gnu.so
+7f9922399000-7f9922599000 ---p 0000d000 08:04 41813164                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/linalg/_flinalg.cpython-36m-x86_64-linux-gnu.so
+7f9922599000-7f992259c000 rw-p 0000d000 08:04 41813164                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/linalg/_flinalg.cpython-36m-x86_64-linux-gnu.so
+7f992259c000-7f992259f000 rw-p 00011000 08:04 41813164                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/linalg/_flinalg.cpython-36m-x86_64-linux-gnu.so
+7f992259f000-7f99226fa000 r-xp 00000000 08:04 41813160                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/linalg/_flapack.cpython-36m-x86_64-linux-gnu.so
+7f99226fa000-7f99228f9000 ---p 0015b000 08:04 41813160                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/linalg/_flapack.cpython-36m-x86_64-linux-gnu.so
+7f99228f9000-7f9922979000 rw-p 0015a000 08:04 41813160                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/linalg/_flapack.cpython-36m-x86_64-linux-gnu.so
+7f9922979000-7f992297a000 rw-p 00000000 00:00 0 
+7f992297a000-7f9922983000 rw-p 001db000 08:04 41813160                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/linalg/_flapack.cpython-36m-x86_64-linux-gnu.so
+7f9922983000-7f992c983000 rw-p 00000000 00:00 0 
+7f992c983000-7f992c984000 ---p 00000000 00:00 0 
+7f992c984000-7f992d184000 rw-p 00000000 00:00 0 
+7f992d184000-7f992f184000 rw-p 00000000 00:00 0 
+7f992f184000-7f992f185000 ---p 00000000 00:00 0 
+7f992f185000-7f992f985000 rw-p 00000000 00:00 0 
+7f992f985000-7f992f986000 ---p 00000000 00:00 0 
+7f992f986000-7f9930186000 rw-p 00000000 00:00 0 
+7f9930186000-7f9932186000 rw-p 00000000 00:00 0 
+7f9932186000-7f9932276000 r-xp 00000000 08:04 40901416                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy.libs/libgfortran-ed201abd.so.3.0.0
+7f9932276000-7f9932475000 ---p 000f0000 08:04 40901416                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy.libs/libgfortran-ed201abd.so.3.0.0
+7f9932475000-7f9932477000 rw-p 000ef000 08:04 40901416                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy.libs/libgfortran-ed201abd.so.3.0.0
+7f9932477000-7f9932478000 rw-p 00000000 00:00 0 
+7f9932478000-7f9932480000 rw-p 000f2000 08:04 40901416                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy.libs/libgfortran-ed201abd.so.3.0.0
+7f9932480000-7f9933f2e000 r-xp 00000000 08:04 40901415                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy.libs/libopenblasp-r0-085ca80a.3.9.so
+7f9933f2e000-7f993412e000 ---p 01aae000 08:04 40901415                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy.libs/libopenblasp-r0-085ca80a.3.9.so
+7f993412e000-7f9934148000 rw-p 01aae000 08:04 40901415                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy.libs/libopenblasp-r0-085ca80a.3.9.so
+7f9934148000-7f9934153000 rw-p 00000000 00:00 0 
+7f9934153000-7f99341cd000 rw-p 01b9d000 08:04 40901415                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy.libs/libopenblasp-r0-085ca80a.3.9.so
+7f99341cd000-7f9934239000 r-xp 00000000 08:04 41813157                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/linalg/_fblas.cpython-36m-x86_64-linux-gnu.so
+7f9934239000-7f9934439000 ---p 0006c000 08:04 41813157                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/linalg/_fblas.cpython-36m-x86_64-linux-gnu.so
+7f9934439000-7f993445f000 rw-p 0006c000 08:04 41813157                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/linalg/_fblas.cpython-36m-x86_64-linux-gnu.so
+7f993445f000-7f9934463000 rw-p 00093000 08:04 41813157                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/linalg/_fblas.cpython-36m-x86_64-linux-gnu.so
+7f9934463000-7f99344a6000 r-xp 00000000 08:04 41421369                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/ndimage/_ni_label.cpython-36m-x86_64-linux-gnu.so
+7f99344a6000-7f99346a5000 ---p 00043000 08:04 41421369                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/ndimage/_ni_label.cpython-36m-x86_64-linux-gnu.so
+7f99346a5000-7f99346aa000 rw-p 00042000 08:04 41421369                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/ndimage/_ni_label.cpython-36m-x86_64-linux-gnu.so
+7f99346aa000-7f99346ab000 rw-p 00000000 00:00 0 
+7f99346ab000-7f99346c6000 r-xp 00000000 08:04 41421362                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/ndimage/_nd_image.cpython-36m-x86_64-linux-gnu.so
+7f99346c6000-7f99348c6000 ---p 0001b000 08:04 41421362                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/ndimage/_nd_image.cpython-36m-x86_64-linux-gnu.so
+7f99348c6000-7f99348c7000 rw-p 0001b000 08:04 41421362                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/ndimage/_nd_image.cpython-36m-x86_64-linux-gnu.so
+7f99348c7000-7f9934b48000 rw-p 00000000 00:00 0 
+7f9934b48000-7f9934b4d000 r-xp 00000000 08:04 40764943                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/Pillow.libs/libXdmcp-e15573e7.so.6.0.0
+7f9934b4d000-7f9934d4c000 ---p 00005000 08:04 40764943                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/Pillow.libs/libXdmcp-e15573e7.so.6.0.0
+7f9934d4c000-7f9934d4e000 rw-p 00004000 08:04 40764943                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/Pillow.libs/libXdmcp-e15573e7.so.6.0.0
+7f9934d4e000-7f9934d50000 r-xp 00000000 08:04 40764942                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/Pillow.libs/libXau-312dbc56.so.6.0.0
+7f9934d50000-7f9934f4f000 ---p 00002000 08:04 40764942                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/Pillow.libs/libXau-312dbc56.so.6.0.0
+7f9934f4f000-7f9934f50000 rw-p 00001000 08:04 40764942                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/Pillow.libs/libXau-312dbc56.so.6.0.0
+7f9934f50000-7f9934f51000 rw-p 00003000 08:04 40764942                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/Pillow.libs/libXau-312dbc56.so.6.0.0
+7f9934f51000-7f9934f84000 r-xp 00000000 08:04 40764944                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/Pillow.libs/liblzma-99449165.so.5.2.5
+7f9934f84000-7f9935183000 ---p 00033000 08:04 40764944                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/Pillow.libs/liblzma-99449165.so.5.2.5
+7f9935183000-7f9935184000 rw-p 00032000 08:04 40764944                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/Pillow.libs/liblzma-99449165.so.5.2.5
+7f9935184000-7f9935185000 rw-p 00034000 08:04 40764944                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/Pillow.libs/liblzma-99449165.so.5.2.5
+7f9935185000-7f99351b5000 r-xp 00000000 08:04 40764947                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/Pillow.libs/libxcb-2dfad6c3.so.1.1.0
+7f99351b5000-7f99353b5000 ---p 00030000 08:04 40764947                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/Pillow.libs/libxcb-2dfad6c3.so.1.1.0
+7f99353b5000-7f99353c6000 rw-p 00030000 08:04 40764947                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/Pillow.libs/libxcb-2dfad6c3.so.1.1.0
+7f99353c6000-7f9935458000 r-xp 00000000 08:04 40764940                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/Pillow.libs/libtiff-41910f6d.so.5.5.0
+7f9935458000-7f9935658000 ---p 00092000 08:04 40764940                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/Pillow.libs/libtiff-41910f6d.so.5.5.0
+7f9935658000-7f993565c000 rw-p 00092000 08:04 40764940                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/Pillow.libs/libtiff-41910f6d.so.5.5.0
+7f993565c000-7f9935667000 rw-p 00097000 08:04 40764940                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/Pillow.libs/libtiff-41910f6d.so.5.5.0
+7f9935667000-7f99356db000 r-xp 00000000 08:04 40764949                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/Pillow.libs/libopenjp2-b3d7668a.so.2.3.1
+7f99356db000-7f99358da000 ---p 00074000 08:04 40764949                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/Pillow.libs/libopenjp2-b3d7668a.so.2.3.1
+7f99358da000-7f99358dc000 rw-p 00073000 08:04 40764949                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/Pillow.libs/libopenjp2-b3d7668a.so.2.3.1
+7f99358dc000-7f99358de000 rw-p 00076000 08:04 40764949                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/Pillow.libs/libopenjp2-b3d7668a.so.2.3.1
+7f99358de000-7f9935919000 r-xp 00000000 08:04 40764948                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/Pillow.libs/libjpeg-ba7bf5af.so.9.4.0
+7f9935919000-7f9935b18000 ---p 0003b000 08:04 40764948                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/Pillow.libs/libjpeg-ba7bf5af.so.9.4.0
+7f9935b18000-7f9935b19000 rw-p 0003a000 08:04 40764948                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/Pillow.libs/libjpeg-ba7bf5af.so.9.4.0
+7f9935b19000-7f9935b1b000 rw-p 0003c000 08:04 40764948                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/Pillow.libs/libjpeg-ba7bf5af.so.9.4.0
+7f9935b1b000-7f9935ba1000 r-xp 00000000 08:04 40764865                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/PIL/_imaging.cpython-36m-x86_64-linux-gnu.so
+7f9935ba1000-7f9935da1000 ---p 00086000 08:04 40764865                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/PIL/_imaging.cpython-36m-x86_64-linux-gnu.so
+7f9935da1000-7f9935da8000 rw-p 00086000 08:04 40764865                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/PIL/_imaging.cpython-36m-x86_64-linux-gnu.so
+7f9935da8000-7f9935dba000 rw-p 0008e000 08:04 40764865                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/PIL/_imaging.cpython-36m-x86_64-linux-gnu.so
+7f9935dba000-7f9935fba000 rw-p 00000000 00:00 0 
+7f9935fba000-7f9935ff2000 r-xp 00000000 08:04 41812799                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/sparse/csgraph/_reordering.cpython-36m-x86_64-linux-gnu.so
+7f9935ff2000-7f99361f2000 ---p 00038000 08:04 41812799                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/sparse/csgraph/_reordering.cpython-36m-x86_64-linux-gnu.so
+7f99361f2000-7f99361f7000 rw-p 00038000 08:04 41812799                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/sparse/csgraph/_reordering.cpython-36m-x86_64-linux-gnu.so
+7f99361f7000-7f99361f8000 rw-p 00000000 00:00 0 
+7f99361f8000-7f9936223000 r-xp 00000000 08:04 41812805                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/sparse/csgraph/_matching.cpython-36m-x86_64-linux-gnu.so
+7f9936223000-7f9936422000 ---p 0002b000 08:04 41812805                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/sparse/csgraph/_matching.cpython-36m-x86_64-linux-gnu.so
+7f9936422000-7f9936426000 rw-p 0002a000 08:04 41812805                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/sparse/csgraph/_matching.cpython-36m-x86_64-linux-gnu.so
+7f9936426000-7f9936427000 rw-p 00000000 00:00 0 
+7f9936427000-7f993645c000 r-xp 00000000 08:04 41812803                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/sparse/csgraph/_flow.cpython-36m-x86_64-linux-gnu.so
+7f993645c000-7f993665b000 ---p 00035000 08:04 41812803                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/sparse/csgraph/_flow.cpython-36m-x86_64-linux-gnu.so
+7f993665b000-7f9936661000 rw-p 00034000 08:04 41812803                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/sparse/csgraph/_flow.cpython-36m-x86_64-linux-gnu.so
+7f9936661000-7f99366a2000 rw-p 00000000 00:00 0 
+7f99366a2000-7f99366cb000 r-xp 00000000 08:04 41812809                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/sparse/csgraph/_min_spanning_tree.cpython-36m-x86_64-linux-gnu.so
+7f99366cb000-7f99368ca000 ---p 00029000 08:04 41812809                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/sparse/csgraph/_min_spanning_tree.cpython-36m-x86_64-linux-gnu.so
+7f99368ca000-7f99368ce000 rw-p 00028000 08:04 41812809                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/sparse/csgraph/_min_spanning_tree.cpython-36m-x86_64-linux-gnu.so
+7f99368ce000-7f99368cf000 rw-p 00000000 00:00 0 
+7f99368cf000-7f99368ec000 r-xp 00000000 08:04 41812802                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/sparse/csgraph/_traversal.cpython-36m-x86_64-linux-gnu.so
+7f99368ec000-7f9936aeb000 ---p 0001d000 08:04 41812802                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/sparse/csgraph/_traversal.cpython-36m-x86_64-linux-gnu.so
+7f9936aeb000-7f9936af0000 rw-p 0001c000 08:04 41812802                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/sparse/csgraph/_traversal.cpython-36m-x86_64-linux-gnu.so
+7f9936af0000-7f9936b10000 r-xp 00000000 08:04 41812804                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/sparse/csgraph/_tools.cpython-36m-x86_64-linux-gnu.so
+7f9936b10000-7f9936d0f000 ---p 00020000 08:04 41812804                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/sparse/csgraph/_tools.cpython-36m-x86_64-linux-gnu.so
+7f9936d0f000-7f9936d14000 rw-p 0001f000 08:04 41812804                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/sparse/csgraph/_tools.cpython-36m-x86_64-linux-gnu.so
+7f9936d14000-7f9936d15000 rw-p 00000000 00:00 0 
+7f9936d15000-7f9936d6b000 r-xp 00000000 08:04 41812801                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/sparse/csgraph/_shortest_path.cpython-36m-x86_64-linux-gnu.so
+7f9936d6b000-7f9936f6a000 ---p 00056000 08:04 41812801                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/sparse/csgraph/_shortest_path.cpython-36m-x86_64-linux-gnu.so
+7f9936f6a000-7f9936f73000 rw-p 00055000 08:04 41812801                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/sparse/csgraph/_shortest_path.cpython-36m-x86_64-linux-gnu.so
+7f9936f73000-7f9936f75000 rw-p 00000000 00:00 0 
+7f9936f75000-7f9936fe4000 r-xp 00000000 08:04 41812791                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/sparse/_csparsetools.cpython-36m-x86_64-linux-gnu.so
+7f9936fe4000-7f99371e4000 ---p 0006f000 08:04 41812791                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/sparse/_csparsetools.cpython-36m-x86_64-linux-gnu.so
+7f99371e4000-7f99371ea000 rw-p 0006f000 08:04 41812791                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/sparse/_csparsetools.cpython-36m-x86_64-linux-gnu.so
+7f99371ea000-7f993722d000 rw-p 00000000 00:00 0 
+7f993722d000-7f9937576000 r-xp 00000000 08:04 41812794                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/sparse/_sparsetools.cpython-36m-x86_64-linux-gnu.so
+7f9937576000-7f9937776000 ---p 00349000 08:04 41812794                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/sparse/_sparsetools.cpython-36m-x86_64-linux-gnu.so
+7f9937776000-7f9937777000 rw-p 00349000 08:04 41812794                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/sparse/_sparsetools.cpython-36m-x86_64-linux-gnu.so
+7f9937777000-7f99377b7000 rw-p 00000000 00:00 0 
+7f99377b7000-7f9937868000 r-xp 00000000 08:04 41812962                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/fft/_pocketfft/pypocketfft.cpython-36m-x86_64-linux-gnu.so
+7f9937868000-7f9937a68000 ---p 000b1000 08:04 41812962                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/fft/_pocketfft/pypocketfft.cpython-36m-x86_64-linux-gnu.so
+7f9937a68000-7f9937a6a000 rw-p 000b1000 08:04 41812962                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/fft/_pocketfft/pypocketfft.cpython-36m-x86_64-linux-gnu.so
+7f9937a6a000-7f9937aae000 rw-p 00000000 00:00 0 
+7f9937aae000-7f9937ab8000 r-xp 00000000 08:04 41812938                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/_lib/_uarray/_uarray.cpython-36m-x86_64-linux-gnu.so
+7f9937ab8000-7f9937cb8000 ---p 0000a000 08:04 41812938                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/_lib/_uarray/_uarray.cpython-36m-x86_64-linux-gnu.so
+7f9937cb8000-7f9937cb9000 rw-p 0000a000 08:04 41812938                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/_lib/_uarray/_uarray.cpython-36m-x86_64-linux-gnu.so
+7f9937cb9000-7f9937cc7000 r-xp 00000000 08:04 41812906                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/_lib/_ccallback_c.cpython-36m-x86_64-linux-gnu.so
+7f9937cc7000-7f9937ec7000 ---p 0000e000 08:04 41812906                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/_lib/_ccallback_c.cpython-36m-x86_64-linux-gnu.so
+7f9937ec7000-7f9937ec9000 rw-p 0000e000 08:04 41812906                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/scipy/_lib/_ccallback_c.cpython-36m-x86_64-linux-gnu.so
+7f9937ec9000-7f9938209000 rw-p 00000000 00:00 0 
+7f9938209000-7f993821f000 r-xp 00000000 08:04 41943413                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5l.cpython-36m-x86_64-linux-gnu.so
+7f993821f000-7f993841e000 ---p 00016000 08:04 41943413                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5l.cpython-36m-x86_64-linux-gnu.so
+7f993841e000-7f9938426000 rw-p 00015000 08:04 41943413                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5l.cpython-36m-x86_64-linux-gnu.so
+7f9938426000-7f993843e000 r-xp 00000000 08:04 41943427                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5o.cpython-36m-x86_64-linux-gnu.so
+7f993843e000-7f993863e000 ---p 00018000 08:04 41943427                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5o.cpython-36m-x86_64-linux-gnu.so
+7f993863e000-7f9938642000 rw-p 00018000 08:04 41943427                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5o.cpython-36m-x86_64-linux-gnu.so
+7f9938642000-7f9938643000 rw-p 00000000 00:00 0 
+7f9938643000-7f9938647000 rw-p 0001c000 08:04 41943427                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5o.cpython-36m-x86_64-linux-gnu.so
+7f9938647000-7f993864e000 r-xp 00000000 08:04 41943411                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5pl.cpython-36m-x86_64-linux-gnu.so
+7f993864e000-7f993884e000 ---p 00007000 08:04 41943411                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5pl.cpython-36m-x86_64-linux-gnu.so
+7f993884e000-7f993884f000 rw-p 00007000 08:04 41943411                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5pl.cpython-36m-x86_64-linux-gnu.so
+7f993884f000-7f9938852000 rw-p 00009000 08:04 41943411                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5pl.cpython-36m-x86_64-linux-gnu.so
+7f9938852000-7f993887e000 r-xp 00000000 08:04 41943414                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5fd.cpython-36m-x86_64-linux-gnu.so
+7f993887e000-7f9938a7e000 ---p 0002c000 08:04 41943414                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5fd.cpython-36m-x86_64-linux-gnu.so
+7f9938a7e000-7f9938a81000 rw-p 0002c000 08:04 41943414                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5fd.cpython-36m-x86_64-linux-gnu.so
+7f9938a81000-7f9938a82000 rw-p 00000000 00:00 0 
+7f9938a82000-7f9938a86000 rw-p 00030000 08:04 41943414                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5fd.cpython-36m-x86_64-linux-gnu.so
+7f9938a86000-7f9938a91000 r-xp 00000000 08:04 41943430                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5i.cpython-36m-x86_64-linux-gnu.so
+7f9938a91000-7f9938c91000 ---p 0000b000 08:04 41943430                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5i.cpython-36m-x86_64-linux-gnu.so
+7f9938c91000-7f9938c97000 rw-p 0000b000 08:04 41943430                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5i.cpython-36m-x86_64-linux-gnu.so
+7f9938c97000-7f9938cbd000 r-xp 00000000 08:04 41943405                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5g.cpython-36m-x86_64-linux-gnu.so
+7f9938cbd000-7f9938ebc000 ---p 00026000 08:04 41943405                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5g.cpython-36m-x86_64-linux-gnu.so
+7f9938ebc000-7f9938ec0000 rw-p 00025000 08:04 41943405                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5g.cpython-36m-x86_64-linux-gnu.so
+7f9938ec0000-7f9938ec1000 rw-p 00000000 00:00 0 
+7f9938ec1000-7f9938ec5000 rw-p 0002a000 08:04 41943405                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5g.cpython-36m-x86_64-linux-gnu.so
+7f9938ec5000-7f9938ee0000 r-xp 00000000 08:04 41943424                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5f.cpython-36m-x86_64-linux-gnu.so
+7f9938ee0000-7f99390df000 ---p 0001b000 08:04 41943424                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5f.cpython-36m-x86_64-linux-gnu.so
+7f99390df000-7f99390e3000 rw-p 0001a000 08:04 41943424                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5f.cpython-36m-x86_64-linux-gnu.so
+7f99390e3000-7f99390e4000 rw-p 00000000 00:00 0 
+7f99390e4000-7f99390e8000 rw-p 0001f000 08:04 41943424                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5f.cpython-36m-x86_64-linux-gnu.so
+7f99390e8000-7f99390f9000 r-xp 00000000 08:04 41943418                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5ds.cpython-36m-x86_64-linux-gnu.so
+7f99390f9000-7f99392f9000 ---p 00011000 08:04 41943418                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5ds.cpython-36m-x86_64-linux-gnu.so
+7f99392f9000-7f99392ff000 rw-p 00011000 08:04 41943418                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5ds.cpython-36m-x86_64-linux-gnu.so
+7f99392ff000-7f993931b000 r-xp 00000000 08:04 41943410                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5d.cpython-36m-x86_64-linux-gnu.so
+7f993931b000-7f993951a000 ---p 0001c000 08:04 41943410                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5d.cpython-36m-x86_64-linux-gnu.so
+7f993951a000-7f993951e000 rw-p 0001b000 08:04 41943410                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5d.cpython-36m-x86_64-linux-gnu.so
+7f993951e000-7f993951f000 rw-p 00000000 00:00 0 
+7f993951f000-7f9939523000 rw-p 00020000 08:04 41943410                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5d.cpython-36m-x86_64-linux-gnu.so
+7f9939523000-7f993952c000 r-xp 00000000 08:04 41943426                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/_proxy.cpython-36m-x86_64-linux-gnu.so
+7f993952c000-7f993972c000 ---p 00009000 08:04 41943426                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/_proxy.cpython-36m-x86_64-linux-gnu.so
+7f993972c000-7f993972d000 rw-p 00009000 08:04 41943426                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/_proxy.cpython-36m-x86_64-linux-gnu.so
+7f993972d000-7f9939730000 rw-p 0000b000 08:04 41943426                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/_proxy.cpython-36m-x86_64-linux-gnu.so
+7f9939730000-7f993973b000 r-xp 00000000 08:04 41943406                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5ac.cpython-36m-x86_64-linux-gnu.so
+7f993973b000-7f993993a000 ---p 0000b000 08:04 41943406                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5ac.cpython-36m-x86_64-linux-gnu.so
+7f993993a000-7f9939940000 rw-p 0000a000 08:04 41943406                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5ac.cpython-36m-x86_64-linux-gnu.so
+7f9939940000-7f9939990000 r-xp 00000000 08:04 41943420                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5p.cpython-36m-x86_64-linux-gnu.so
+7f9939990000-7f9939b90000 ---p 00050000 08:04 41943420                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5p.cpython-36m-x86_64-linux-gnu.so
+7f9939b90000-7f9939b9a000 rw-p 00050000 08:04 41943420                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5p.cpython-36m-x86_64-linux-gnu.so
+7f9939b9a000-7f9939b9c000 rw-p 00000000 00:00 0 
+7f9939b9c000-7f9939ba0000 rw-p 0005b000 08:04 41943420                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5p.cpython-36m-x86_64-linux-gnu.so
+7f9939ba0000-7f9939bb8000 r-xp 00000000 08:04 41943432                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5s.cpython-36m-x86_64-linux-gnu.so
+7f9939bb8000-7f9939db7000 ---p 00018000 08:04 41943432                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5s.cpython-36m-x86_64-linux-gnu.so
+7f9939db7000-7f9939dbf000 rw-p 00017000 08:04 41943432                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5s.cpython-36m-x86_64-linux-gnu.so
+7f9939dbf000-7f9939dde000 r-xp 00000000 08:04 41943416                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5a.cpython-36m-x86_64-linux-gnu.so
+7f9939dde000-7f9939fde000 ---p 0001f000 08:04 41943416                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5a.cpython-36m-x86_64-linux-gnu.so
+7f9939fde000-7f9939fe6000 rw-p 0001f000 08:04 41943416                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5a.cpython-36m-x86_64-linux-gnu.so
+7f9939fe6000-7f9939fef000 r-xp 00000000 08:04 41943409                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5z.cpython-36m-x86_64-linux-gnu.so
+7f9939fef000-7f993a1ee000 ---p 00009000 08:04 41943409                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5z.cpython-36m-x86_64-linux-gnu.so
+7f993a1ee000-7f993a1f0000 rw-p 00008000 08:04 41943409                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5z.cpython-36m-x86_64-linux-gnu.so
+7f993a1f0000-7f993a1f4000 rw-p 0000b000 08:04 41943409                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5z.cpython-36m-x86_64-linux-gnu.so
+7f993a1f4000-7f993a1fe000 r-xp 00000000 08:04 41943425                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/utils.cpython-36m-x86_64-linux-gnu.so
+7f993a1fe000-7f993a3fd000 ---p 0000a000 08:04 41943425                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/utils.cpython-36m-x86_64-linux-gnu.so
+7f993a3fd000-7f993a3fe000 rw-p 00009000 08:04 41943425                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/utils.cpython-36m-x86_64-linux-gnu.so
+7f993a3fe000-7f993a402000 rw-p 0000b000 08:04 41943425                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/utils.cpython-36m-x86_64-linux-gnu.so
+7f993a402000-7f993a478000 r-xp 00000000 08:04 41943422                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5t.cpython-36m-x86_64-linux-gnu.so
+7f993a478000-7f993a677000 ---p 00076000 08:04 41943422                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5t.cpython-36m-x86_64-linux-gnu.so
+7f993a677000-7f993a683000 rw-p 00075000 08:04 41943422                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5t.cpython-36m-x86_64-linux-gnu.so
+7f993a683000-7f993a686000 rw-p 00000000 00:00 0 
+7f993a686000-7f993a68c000 rw-p 00081000 08:04 41943422                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5t.cpython-36m-x86_64-linux-gnu.so
+7f993a68c000-7f993a699000 r-xp 00000000 08:04 41943421                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5r.cpython-36m-x86_64-linux-gnu.so
+7f993a699000-7f993a898000 ---p 0000d000 08:04 41943421                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5r.cpython-36m-x86_64-linux-gnu.so
+7f993a898000-7f993a89a000 rw-p 0000c000 08:04 41943421                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5r.cpython-36m-x86_64-linux-gnu.so
+7f993a89a000-7f993a89b000 rw-p 00000000 00:00 0 
+7f993a89b000-7f993a89f000 rw-p 0000f000 08:04 41943421                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5r.cpython-36m-x86_64-linux-gnu.so
+7f993a89f000-7f993a8b2000 r-xp 00000000 08:04 41943407                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/_conv.cpython-36m-x86_64-linux-gnu.so
+7f993a8b2000-7f993aab1000 ---p 00013000 08:04 41943407                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/_conv.cpython-36m-x86_64-linux-gnu.so
+7f993aab1000-7f993aab7000 rw-p 00012000 08:04 41943407                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/_conv.cpython-36m-x86_64-linux-gnu.so
+7f993aab7000-7f993aad5000 r-xp 00000000 08:04 41943428                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/_objects.cpython-36m-x86_64-linux-gnu.so
+7f993aad5000-7f993acd4000 ---p 0001e000 08:04 41943428                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/_objects.cpython-36m-x86_64-linux-gnu.so
+7f993acd4000-7f993acdc000 rw-p 0001d000 08:04 41943428                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/_objects.cpython-36m-x86_64-linux-gnu.so
+7f993acdc000-7f993ad10000 r-xp 00000000 08:04 41943408                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/defs.cpython-36m-x86_64-linux-gnu.so
+7f993ad10000-7f993af10000 ---p 00034000 08:04 41943408                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/defs.cpython-36m-x86_64-linux-gnu.so
+7f993af10000-7f993af1b000 rw-p 00034000 08:04 41943408                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/defs.cpython-36m-x86_64-linux-gnu.so
+7f993af1b000-7f993af33000 r-xp 00000000 08:04 41943423                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5.cpython-36m-x86_64-linux-gnu.so
+7f993af33000-7f993b133000 ---p 00018000 08:04 41943423                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5.cpython-36m-x86_64-linux-gnu.so
+7f993b133000-7f993b13a000 rw-p 00018000 08:04 41943423                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/h5.cpython-36m-x86_64-linux-gnu.so
+7f993b13a000-7f993b14e000 r-xp 00000000 08:04 41943438                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/.libs/libz-a147dcb0.so.1.2.3
+7f993b14e000-7f993b34d000 ---p 00014000 08:04 41943438                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/.libs/libz-a147dcb0.so.1.2.3
+7f993b34d000-7f993b34e000 rw-p 00013000 08:04 41943438                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/.libs/libz-a147dcb0.so.1.2.3
+7f993b34e000-7f993b34f000 rw-p 00015000 08:04 41943438                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/.libs/libz-a147dcb0.so.1.2.3
+7f993b34f000-7f993b357000 r-xp 00000000 08:04 41943435                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/.libs/libaec-2147abcd.so.0.0.4
+7f993b357000-7f993b556000 ---p 00008000 08:04 41943435                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/.libs/libaec-2147abcd.so.0.0.4
+7f993b556000-7f993b557000 rw-p 00007000 08:04 41943435                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/.libs/libaec-2147abcd.so.0.0.4
+7f993b557000-7f993b558000 rw-p 00009000 08:04 41943435                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/.libs/libaec-2147abcd.so.0.0.4
+7f993b558000-7f993b8f4000 r-xp 00000000 08:04 41943434                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/.libs/libhdf5-beac1db3.so.103.0.0
+7f993b8f4000-7f993baf4000 ---p 0039c000 08:04 41943434                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/.libs/libhdf5-beac1db3.so.103.0.0
+7f993baf4000-7f993bb06000 rw-p 0039c000 08:04 41943434                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/.libs/libhdf5-beac1db3.so.103.0.0
+7f993bb06000-7f993bb08000 rw-p 00000000 00:00 0 
+7f993bb08000-7f993bb59000 rw-p 003ae000 08:04 41943434                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/.libs/libhdf5-beac1db3.so.103.0.0
+7f993bb59000-7f993bc19000 rw-p 00000000 00:00 0 
+7f993bc19000-7f993bc2a000 r-xp 00000000 08:02 678590                     /usr/lib/python3.6/lib-dynload/_json.cpython-36m-x86_64-linux-gnu.so
+7f993bc2a000-7f993be29000 ---p 00011000 08:02 678590                     /usr/lib/python3.6/lib-dynload/_json.cpython-36m-x86_64-linux-gnu.so
+7f993be29000-7f993be2a000 r--p 00010000 08:02 678590                     /usr/lib/python3.6/lib-dynload/_json.cpython-36m-x86_64-linux-gnu.so
+7f993be2a000-7f993be2b000 rw-p 00011000 08:02 678590                     /usr/lib/python3.6/lib-dynload/_json.cpython-36m-x86_64-linux-gnu.so
+7f993be2b000-7f993c1eb000 rw-p 00000000 00:00 0 
+7f993c1ec000-7f993c46c000 rw-p 00000000 00:00 0 
+7f993c46c000-7f993c470000 r-xp 00000000 08:02 678600                     /usr/lib/python3.6/lib-dynload/termios.cpython-36m-x86_64-linux-gnu.so
+7f993c470000-7f993c66f000 ---p 00004000 08:02 678600                     /usr/lib/python3.6/lib-dynload/termios.cpython-36m-x86_64-linux-gnu.so
+7f993c66f000-7f993c670000 r--p 00003000 08:02 678600                     /usr/lib/python3.6/lib-dynload/termios.cpython-36m-x86_64-linux-gnu.so
+7f993c670000-7f993c672000 rw-p 00004000 08:02 678600                     /usr/lib/python3.6/lib-dynload/termios.cpython-36m-x86_64-linux-gnu.so
+7f993c672000-7f993c679000 r-xp 00000000 08:02 678592                     /usr/lib/python3.6/lib-dynload/_csv.cpython-36m-x86_64-linux-gnu.so
+7f993c679000-7f993c879000 ---p 00007000 08:02 678592                     /usr/lib/python3.6/lib-dynload/_csv.cpython-36m-x86_64-linux-gnu.so
+7f993c879000-7f993c87a000 r--p 00007000 08:02 678592                     /usr/lib/python3.6/lib-dynload/_csv.cpython-36m-x86_64-linux-gnu.so
+7f993c87a000-7f993c87c000 rw-p 00008000 08:02 678592                     /usr/lib/python3.6/lib-dynload/_csv.cpython-36m-x86_64-linux-gnu.so
+7f993c87c000-7f993c9bc000 rw-p 00000000 00:00 0 
+7f993c9bc000-7f993cbff000 r-xp 00000000 08:04 41815199                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/google/protobuf/pyext/_message.cpython-36m-x86_64-linux-gnu.so
+7f993cbff000-7f993cdff000 ---p 00243000 08:04 41815199                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/google/protobuf/pyext/_message.cpython-36m-x86_64-linux-gnu.so
+7f993cdff000-7f993ce10000 rw-p 00243000 08:04 41815199                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/google/protobuf/pyext/_message.cpython-36m-x86_64-linux-gnu.so
+7f993ce10000-7f993ce13000 rw-p 00000000 00:00 0 
+7f993ce13000-7f993ce14000 r-xp 00000000 08:04 41815183                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/google/protobuf/internal/_api_implementation.cpython-36m-x86_64-linux-gnu.so
+7f993ce14000-7f993d013000 ---p 00001000 08:04 41815183                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/google/protobuf/internal/_api_implementation.cpython-36m-x86_64-linux-gnu.so
+7f993d013000-7f993d014000 rw-p 00000000 08:04 41815183                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/google/protobuf/internal/_api_implementation.cpython-36m-x86_64-linux-gnu.so
+7f993d014000-7f993d2d4000 rw-p 00000000 00:00 0 
+7f993d2d4000-7f993d2d5000 r-xp 00000000 08:02 678337                     /usr/lib/python3.6/lib-dynload/_opcode.cpython-36m-x86_64-linux-gnu.so
+7f993d2d5000-7f993d4d4000 ---p 00001000 08:02 678337                     /usr/lib/python3.6/lib-dynload/_opcode.cpython-36m-x86_64-linux-gnu.so
+7f993d4d4000-7f993d4d5000 r--p 00000000 08:02 678337                     /usr/lib/python3.6/lib-dynload/_opcode.cpython-36m-x86_64-linux-gnu.so
+7f993d4d5000-7f993d4d6000 rw-p 00001000 08:02 678337                     /usr/lib/python3.6/lib-dynload/_opcode.cpython-36m-x86_64-linux-gnu.so
+7f993d4d6000-7f993d556000 rw-p 00000000 00:00 0 
+7f993d556000-7f993d55d000 r-xp 00000000 08:02 527630                     /lib/x86_64-linux-gnu/librt-2.23.so
+7f993d55d000-7f993d75c000 ---p 00007000 08:02 527630                     /lib/x86_64-linux-gnu/librt-2.23.so
+7f993d75c000-7f993d75d000 r--p 00006000 08:02 527630                     /lib/x86_64-linux-gnu/librt-2.23.so
+7f993d75d000-7f993d75e000 rw-p 00007000 08:02 527630                     /lib/x86_64-linux-gnu/librt-2.23.so
+7f993d75e000-7f993e546000 r-xp 00000000 08:04 43125611                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/tensorflow/libtensorflow_framework.so
+7f993e546000-7f993e547000 ---p 00de8000 08:04 43125611                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/tensorflow/libtensorflow_framework.so
+7f993e547000-7f993e597000 r--p 00de8000 08:04 43125611                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/tensorflow/libtensorflow_framework.so
+7f993e597000-7f993e59a000 rw-p 00e38000 08:04 43125611                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/tensorflow/libtensorflow_framework.so
+7f993e59a000-7f993e5a7000 rw-p 00000000 00:00 0 
+7f993e5a7000-7f9947d32000 r-xp 00000000 08:04 43256851                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so
+7f9947d32000-7f9947d33000 ---p 0978b000 08:04 43256851                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so
+7f9947d33000-7f9948118000 r--p 0978b000 08:04 43256851                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so
+7f9948118000-7f9948138000 rw-p 09b70000 08:04 43256851                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/tensorflow/python/_pywrap_tensorflow_internal.so
+7f9948138000-7f9948399000 rw-p 00000000 00:00 0 
+7f9948399000-7f9948431000 r-xp 00000000 08:04 40763412                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/_generator.cpython-36m-x86_64-linux-gnu.so
+7f9948431000-7f9948630000 ---p 00098000 08:04 40763412                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/_generator.cpython-36m-x86_64-linux-gnu.so
+7f9948630000-7f9948631000 r--p 00097000 08:04 40763412                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/_generator.cpython-36m-x86_64-linux-gnu.so
+7f9948631000-7f9948655000 rw-p 00098000 08:04 40763412                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/_generator.cpython-36m-x86_64-linux-gnu.so
+7f9948655000-7f9948657000 rw-p 00000000 00:00 0 
+7f9948657000-7f9948663000 r-xp 00000000 08:04 40763407                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/_sfc64.cpython-36m-x86_64-linux-gnu.so
+7f9948663000-7f9948862000 ---p 0000c000 08:04 40763407                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/_sfc64.cpython-36m-x86_64-linux-gnu.so
+7f9948862000-7f9948863000 r--p 0000b000 08:04 40763407                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/_sfc64.cpython-36m-x86_64-linux-gnu.so
+7f9948863000-7f9948864000 rw-p 0000c000 08:04 40763407                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/_sfc64.cpython-36m-x86_64-linux-gnu.so
+7f9948864000-7f9948873000 r-xp 00000000 08:04 40763409                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/_pcg64.cpython-36m-x86_64-linux-gnu.so
+7f9948873000-7f9948a72000 ---p 0000f000 08:04 40763409                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/_pcg64.cpython-36m-x86_64-linux-gnu.so
+7f9948a72000-7f9948a73000 r--p 0000e000 08:04 40763409                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/_pcg64.cpython-36m-x86_64-linux-gnu.so
+7f9948a73000-7f9948a75000 rw-p 0000f000 08:04 40763409                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/_pcg64.cpython-36m-x86_64-linux-gnu.so
+7f9948a75000-7f9948a88000 r-xp 00000000 08:04 40763413                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/_philox.cpython-36m-x86_64-linux-gnu.so
+7f9948a88000-7f9948c87000 ---p 00013000 08:04 40763413                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/_philox.cpython-36m-x86_64-linux-gnu.so
+7f9948c87000-7f9948c88000 r--p 00012000 08:04 40763413                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/_philox.cpython-36m-x86_64-linux-gnu.so
+7f9948c88000-7f9948c8a000 rw-p 00013000 08:04 40763413                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/_philox.cpython-36m-x86_64-linux-gnu.so
+7f9948c8a000-7f9948ca0000 r-xp 00000000 08:04 40763416                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/_mt19937.cpython-36m-x86_64-linux-gnu.so
+7f9948ca0000-7f9948e9f000 ---p 00016000 08:04 40763416                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/_mt19937.cpython-36m-x86_64-linux-gnu.so
+7f9948e9f000-7f9948ea0000 r--p 00015000 08:04 40763416                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/_mt19937.cpython-36m-x86_64-linux-gnu.so
+7f9948ea0000-7f9948ea2000 rw-p 00016000 08:04 40763416                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/_mt19937.cpython-36m-x86_64-linux-gnu.so
+7f9948ea2000-7f9948ef4000 r-xp 00000000 08:04 40763417                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/_bounded_integers.cpython-36m-x86_64-linux-gnu.so
+7f9948ef4000-7f99490f3000 ---p 00052000 08:04 40763417                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/_bounded_integers.cpython-36m-x86_64-linux-gnu.so
+7f99490f3000-7f99490f4000 r--p 00051000 08:04 40763417                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/_bounded_integers.cpython-36m-x86_64-linux-gnu.so
+7f99490f4000-7f99490f5000 rw-p 00052000 08:04 40763417                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/_bounded_integers.cpython-36m-x86_64-linux-gnu.so
+7f99490f5000-7f99490f6000 rw-p 00000000 00:00 0 
+7f99490f6000-7f9949311000 r-xp 00000000 08:02 527488                     /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+7f9949311000-7f9949510000 ---p 0021b000 08:02 527488                     /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+7f9949510000-7f994952c000 r--p 0021a000 08:02 527488                     /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+7f994952c000-7f9949538000 rw-p 00236000 08:02 527488                     /lib/x86_64-linux-gnu/libcrypto.so.1.0.0
+7f9949538000-7f994953b000 rw-p 00000000 00:00 0 
+7f994953b000-7f9949541000 r-xp 00000000 08:02 678336                     /usr/lib/python3.6/lib-dynload/_hashlib.cpython-36m-x86_64-linux-gnu.so
+7f9949541000-7f9949740000 ---p 00006000 08:02 678336                     /usr/lib/python3.6/lib-dynload/_hashlib.cpython-36m-x86_64-linux-gnu.so
+7f9949740000-7f9949741000 r--p 00005000 08:02 678336                     /usr/lib/python3.6/lib-dynload/_hashlib.cpython-36m-x86_64-linux-gnu.so
+7f9949741000-7f9949742000 rw-p 00006000 08:02 678336                     /usr/lib/python3.6/lib-dynload/_hashlib.cpython-36m-x86_64-linux-gnu.so
+7f9949742000-7f9949782000 rw-p 00000000 00:00 0 
+7f9949782000-7f99497b9000 r-xp 00000000 08:04 40763421                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/_common.cpython-36m-x86_64-linux-gnu.so
+7f99497b9000-7f99499b8000 ---p 00037000 08:04 40763421                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/_common.cpython-36m-x86_64-linux-gnu.so
+7f99499b8000-7f99499b9000 r--p 00036000 08:04 40763421                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/_common.cpython-36m-x86_64-linux-gnu.so
+7f99499b9000-7f99499bb000 rw-p 00037000 08:04 40763421                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/_common.cpython-36m-x86_64-linux-gnu.so
+7f99499bb000-7f99499bc000 rw-p 00000000 00:00 0 
+7f99499bc000-7f99499e2000 r-xp 00000000 08:04 40763411                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/bit_generator.cpython-36m-x86_64-linux-gnu.so
+7f99499e2000-7f9949be1000 ---p 00026000 08:04 40763411                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/bit_generator.cpython-36m-x86_64-linux-gnu.so
+7f9949be1000-7f9949be2000 r--p 00025000 08:04 40763411                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/bit_generator.cpython-36m-x86_64-linux-gnu.so
+7f9949be2000-7f9949be7000 rw-p 00026000 08:04 40763411                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/bit_generator.cpython-36m-x86_64-linux-gnu.so
+7f9949be7000-7f9949c5f000 r-xp 00000000 08:04 40763406                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/mtrand.cpython-36m-x86_64-linux-gnu.so
+7f9949c5f000-7f9949e5e000 ---p 00078000 08:04 40763406                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/mtrand.cpython-36m-x86_64-linux-gnu.so
+7f9949e5e000-7f9949e5f000 r--p 00077000 08:04 40763406                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/mtrand.cpython-36m-x86_64-linux-gnu.so
+7f9949e5f000-7f9949e85000 rw-p 00078000 08:04 40763406                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/random/mtrand.cpython-36m-x86_64-linux-gnu.so
+7f9949e85000-7f9949e87000 rw-p 00000000 00:00 0 
+7f9949e98000-7f9949f18000 rw-p 00000000 00:00 0 
+7f9949f18000-7f9949f2d000 r-xp 00000000 08:04 40763540                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/fft/_pocketfft_internal.cpython-36m-x86_64-linux-gnu.so
+7f9949f2d000-7f994a12d000 ---p 00015000 08:04 40763540                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/fft/_pocketfft_internal.cpython-36m-x86_64-linux-gnu.so
+7f994a12d000-7f994a12e000 r--p 00015000 08:04 40763540                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/fft/_pocketfft_internal.cpython-36m-x86_64-linux-gnu.so
+7f994a12e000-7f994a12f000 rw-p 00016000 08:04 40763540                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/fft/_pocketfft_internal.cpython-36m-x86_64-linux-gnu.so
+7f994a12f000-7f994a16f000 rw-p 00000000 00:00 0 
+7f994a16f000-7f994a1a6000 r-xp 00000000 08:02 792550                     /usr/lib/x86_64-linux-gnu/libmpdec.so.2.4.2
+7f994a1a6000-7f994a3a5000 ---p 00037000 08:02 792550                     /usr/lib/x86_64-linux-gnu/libmpdec.so.2.4.2
+7f994a3a5000-7f994a3a6000 r--p 00036000 08:02 792550                     /usr/lib/x86_64-linux-gnu/libmpdec.so.2.4.2
+7f994a3a6000-7f994a3a7000 rw-p 00037000 08:02 792550                     /usr/lib/x86_64-linux-gnu/libmpdec.so.2.4.2
+7f994a3a7000-7f994a3cb000 r-xp 00000000 08:02 678604                     /usr/lib/python3.6/lib-dynload/_decimal.cpython-36m-x86_64-linux-gnu.so
+7f994a3cb000-7f994a5ca000 ---p 00024000 08:02 678604                     /usr/lib/python3.6/lib-dynload/_decimal.cpython-36m-x86_64-linux-gnu.so
+7f994a5ca000-7f994a5cb000 r--p 00023000 08:02 678604                     /usr/lib/python3.6/lib-dynload/_decimal.cpython-36m-x86_64-linux-gnu.so
+7f994a5cb000-7f994a5d4000 rw-p 00024000 08:02 678604                     /usr/lib/python3.6/lib-dynload/_decimal.cpython-36m-x86_64-linux-gnu.so
+7f994a5d4000-7f994a5f5000 r-xp 00000000 08:02 527543                     /lib/x86_64-linux-gnu/liblzma.so.5.0.0
+7f994a5f5000-7f994a7f4000 ---p 00021000 08:02 527543                     /lib/x86_64-linux-gnu/liblzma.so.5.0.0
+7f994a7f4000-7f994a7f5000 r--p 00020000 08:02 527543                     /lib/x86_64-linux-gnu/liblzma.so.5.0.0
+7f994a7f5000-7f994a7f6000 rw-p 00021000 08:02 527543                     /lib/x86_64-linux-gnu/liblzma.so.5.0.0
+7f994a7f6000-7f994a7fe000 r-xp 00000000 08:02 678607                     /usr/lib/python3.6/lib-dynload/_lzma.cpython-36m-x86_64-linux-gnu.so
+7f994a7fe000-7f994a9fd000 ---p 00008000 08:02 678607                     /usr/lib/python3.6/lib-dynload/_lzma.cpython-36m-x86_64-linux-gnu.so
+7f994a9fd000-7f994a9fe000 r--p 00007000 08:02 678607                     /usr/lib/python3.6/lib-dynload/_lzma.cpython-36m-x86_64-linux-gnu.so
+7f994a9fe000-7f994aa00000 rw-p 00008000 08:02 678607                     /usr/lib/python3.6/lib-dynload/_lzma.cpython-36m-x86_64-linux-gnu.so
+7f994aa00000-7f994aa0f000 r-xp 00000000 08:02 527475                     /lib/x86_64-linux-gnu/libbz2.so.1.0.4
+7f994aa0f000-7f994ac0e000 ---p 0000f000 08:02 527475                     /lib/x86_64-linux-gnu/libbz2.so.1.0.4
+7f994ac0e000-7f994ac0f000 r--p 0000e000 08:02 527475                     /lib/x86_64-linux-gnu/libbz2.so.1.0.4
+7f994ac0f000-7f994ac10000 rw-p 0000f000 08:02 527475                     /lib/x86_64-linux-gnu/libbz2.so.1.0.4
+7f994ac10000-7f994ac14000 r-xp 00000000 08:02 678609                     /usr/lib/python3.6/lib-dynload/_bz2.cpython-36m-x86_64-linux-gnu.so
+7f994ac14000-7f994ae13000 ---p 00004000 08:02 678609                     /usr/lib/python3.6/lib-dynload/_bz2.cpython-36m-x86_64-linux-gnu.so
+7f994ae13000-7f994ae14000 r--p 00003000 08:02 678609                     /usr/lib/python3.6/lib-dynload/_bz2.cpython-36m-x86_64-linux-gnu.so
+7f994ae14000-7f994ae15000 rw-p 00004000 08:02 678609                     /usr/lib/python3.6/lib-dynload/_bz2.cpython-36m-x86_64-linux-gnu.so
+7f994ae15000-7f994aed5000 rw-p 00000000 00:00 0 
+7f994aed5000-7f994aeff000 r-xp 00000000 08:04 40656555                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/linalg/_umath_linalg.cpython-36m-x86_64-linux-gnu.so
+7f994aeff000-7f994b0fe000 ---p 0002a000 08:04 40656555                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/linalg/_umath_linalg.cpython-36m-x86_64-linux-gnu.so
+7f994b0fe000-7f994b0ff000 r--p 00029000 08:04 40656555                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/linalg/_umath_linalg.cpython-36m-x86_64-linux-gnu.so
+7f994b0ff000-7f994b100000 rw-p 0002a000 08:04 40656555                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/linalg/_umath_linalg.cpython-36m-x86_64-linux-gnu.so
+7f994b100000-7f994b101000 rw-p 00000000 00:00 0 
+7f994b101000-7f994b104000 rw-p 00031000 08:04 40656555                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/linalg/_umath_linalg.cpython-36m-x86_64-linux-gnu.so
+7f994b104000-7f994b107000 r-xp 00000000 08:04 40656554                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/linalg/lapack_lite.cpython-36m-x86_64-linux-gnu.so
+7f994b107000-7f994b306000 ---p 00003000 08:04 40656554                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/linalg/lapack_lite.cpython-36m-x86_64-linux-gnu.so
+7f994b306000-7f994b307000 r--p 00002000 08:04 40656554                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/linalg/lapack_lite.cpython-36m-x86_64-linux-gnu.so
+7f994b307000-7f994b308000 rw-p 00003000 08:04 40656554                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/linalg/lapack_lite.cpython-36m-x86_64-linux-gnu.so
+7f994b308000-7f994b30a000 rw-p 00005000 08:04 40656554                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/linalg/lapack_lite.cpython-36m-x86_64-linux-gnu.so
+7f994b30a000-7f994b3ca000 rw-p 00000000 00:00 0 
+7f994b3ca000-7f994b3eb000 r-xp 00000000 08:04 40656376                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/core/_multiarray_tests.cpython-36m-x86_64-linux-gnu.so
+7f994b3eb000-7f994b5eb000 ---p 00021000 08:04 40656376                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/core/_multiarray_tests.cpython-36m-x86_64-linux-gnu.so
+7f994b5eb000-7f994b5ec000 r--p 00021000 08:04 40656376                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/core/_multiarray_tests.cpython-36m-x86_64-linux-gnu.so
+7f994b5ec000-7f994b5ee000 rw-p 00022000 08:04 40656376                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/core/_multiarray_tests.cpython-36m-x86_64-linux-gnu.so
+7f994b5ee000-7f994b62e000 rw-p 00000000 00:00 0 
+7f994b659000-7f994b7d9000 rw-p 00000000 00:00 0 
+7f994b7d9000-7f99517d9000 rw-p 00000000 00:00 0 
+7f99517d9000-7f99517da000 ---p 00000000 00:00 0 
+7f99517da000-7f9951fda000 rw-p 00000000 00:00 0 
+7f9951fda000-7f9951fdb000 ---p 00000000 00:00 0 
+7f9951fdb000-7f99527db000 rw-p 00000000 00:00 0 
+7f99527db000-7f99547db000 rw-p 00000000 00:00 0 
+7f99547db000-7f99547dc000 ---p 00000000 00:00 0 
+7f99547dc000-7f9954fdc000 rw-p 00000000 00:00 0 
+7f9954fdc000-7f9956fdc000 rw-p 00000000 00:00 0 
+7f9956fdc000-7f9956fdd000 ---p 00000000 00:00 0 
+7f9956fdd000-7f99577dd000 rw-p 00000000 00:00 0 
+7f99577dd000-7f995b7dd000 rw-p 00000000 00:00 0 
+7f995b811000-7f995b951000 rw-p 00000000 00:00 0 
+7f995b951000-7f995b953000 r-xp 00000000 08:04 41943436                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/.libs/libsz-1c7dd0cf.so.2.0.1
+7f995b953000-7f995bb52000 ---p 00002000 08:04 41943436                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/.libs/libsz-1c7dd0cf.so.2.0.1
+7f995bb52000-7f995bb56000 rw-p 00001000 08:04 41943436                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/.libs/libsz-1c7dd0cf.so.2.0.1
+7f995bb56000-7f995bb76000 r-xp 00000000 08:04 41943437                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/.libs/libhdf5_hl-db841637.so.100.1.1
+7f995bb76000-7f995bd76000 ---p 00020000 08:04 41943437                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/.libs/libhdf5_hl-db841637.so.100.1.1
+7f995bd76000-7f995bd77000 rw-p 00020000 08:04 41943437                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/.libs/libhdf5_hl-db841637.so.100.1.1
+7f995bd77000-7f995bd78000 rw-p 00000000 00:00 0 
+7f995bd78000-7f995bd84000 rw-p 00022000 08:04 41943437                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/.libs/libhdf5_hl-db841637.so.100.1.1
+7f995bd84000-7f995bd8f000 r-xp 00000000 08:04 41943419                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/_errors.cpython-36m-x86_64-linux-gnu.so
+7f995bd8f000-7f995bf8e000 ---p 0000b000 08:04 41943419                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/_errors.cpython-36m-x86_64-linux-gnu.so
+7f995bf8e000-7f995bf94000 rw-p 0000a000 08:04 41943419                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/h5py/_errors.cpython-36m-x86_64-linux-gnu.so
+7f995bf94000-7f995bfd4000 rw-p 00000000 00:00 0 
+7f995bfd4000-7f995c032000 r-xp 00000000 08:02 527642                     /lib/x86_64-linux-gnu/libssl.so.1.0.0
+7f995c032000-7f995c232000 ---p 0005e000 08:02 527642                     /lib/x86_64-linux-gnu/libssl.so.1.0.0
+7f995c232000-7f995c236000 r--p 0005e000 08:02 527642                     /lib/x86_64-linux-gnu/libssl.so.1.0.0
+7f995c236000-7f995c23d000 rw-p 00062000 08:02 527642                     /lib/x86_64-linux-gnu/libssl.so.1.0.0
+7f995c23d000-7f995c256000 r-xp 00000000 08:02 678338                     /usr/lib/python3.6/lib-dynload/_ssl.cpython-36m-x86_64-linux-gnu.so
+7f995c256000-7f995c455000 ---p 00019000 08:02 678338                     /usr/lib/python3.6/lib-dynload/_ssl.cpython-36m-x86_64-linux-gnu.so
+7f995c455000-7f995c456000 r--p 00018000 08:02 678338                     /usr/lib/python3.6/lib-dynload/_ssl.cpython-36m-x86_64-linux-gnu.so
+7f995c456000-7f995c45b000 rw-p 00019000 08:02 678338                     /usr/lib/python3.6/lib-dynload/_ssl.cpython-36m-x86_64-linux-gnu.so
+7f995c45b000-7f995cddb000 rw-p 00000000 00:00 0 
+7f995cddb000-7f995cddf000 r-xp 00000000 08:02 527660                     /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7f995cddf000-7f995cfde000 ---p 00004000 08:02 527660                     /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7f995cfde000-7f995cfdf000 r--p 00003000 08:02 527660                     /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7f995cfdf000-7f995cfe0000 rw-p 00004000 08:02 527660                     /lib/x86_64-linux-gnu/libuuid.so.1.3.0
+7f995cfe0000-7f995cff5000 r-xp 00000000 08:04 40763555                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy.libs/libz-eb09ad1d.so.1.2.3
+7f995cff5000-7f995d1f4000 ---p 00015000 08:04 40763555                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy.libs/libz-eb09ad1d.so.1.2.3
+7f995d1f4000-7f995d1f5000 r--p 00014000 08:04 40763555                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy.libs/libz-eb09ad1d.so.1.2.3
+7f995d1f5000-7f995d1f7000 rw-p 00015000 08:04 40763555                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy.libs/libz-eb09ad1d.so.1.2.3
+7f995d1f7000-7f995d236000 r-xp 00000000 08:04 40763556                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy.libs/libquadmath-2d0c479f.so.0.0.0
+7f995d236000-7f995d435000 ---p 0003f000 08:04 40763556                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy.libs/libquadmath-2d0c479f.so.0.0.0
+7f995d435000-7f995d436000 rw-p 0003e000 08:04 40763556                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy.libs/libquadmath-2d0c479f.so.0.0.0
+7f995d436000-7f995d437000 rw-p 00040000 08:04 40763556                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy.libs/libquadmath-2d0c479f.so.0.0.0
+7f995d437000-7f995d63f000 r-xp 00000000 08:04 40763558                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy.libs/libgfortran-2e0d59d6.so.5.0.0
+7f995d63f000-7f995d83e000 ---p 00208000 08:04 40763558                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy.libs/libgfortran-2e0d59d6.so.5.0.0
+7f995d83e000-7f995d85f000 rw-p 00207000 08:04 40763558                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy.libs/libgfortran-2e0d59d6.so.5.0.0
+7f995d85f000-7f995f397000 r-xp 00000000 08:04 40763557                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy.libs/libopenblasp-r0-ae94cfde.3.9.dev.so
+7f995f397000-7f995f597000 ---p 01b38000 08:04 40763557                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy.libs/libopenblasp-r0-ae94cfde.3.9.dev.so
+7f995f597000-7f995f59d000 r--p 01b38000 08:04 40763557                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy.libs/libopenblasp-r0-ae94cfde.3.9.dev.so
+7f995f59d000-7f995f5b2000 rw-p 01b3e000 08:04 40763557                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy.libs/libopenblasp-r0-ae94cfde.3.9.dev.so
+7f995f5b2000-7f995f5be000 rw-p 00000000 00:00 0 
+7f995f5be000-7f995f63e000 rw-p 01c30000 08:04 40763557                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy.libs/libopenblasp-r0-ae94cfde.3.9.dev.so
+7f995f63e000-7f995f9c7000 r-xp 00000000 08:04 40656357                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/core/_multiarray_umath.cpython-36m-x86_64-linux-gnu.so
+7f995f9c7000-7f995fbc7000 ---p 00389000 08:04 40656357                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/core/_multiarray_umath.cpython-36m-x86_64-linux-gnu.so
+7f995fbc7000-7f995fbc9000 r--p 00389000 08:04 40656357                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/core/_multiarray_umath.cpython-36m-x86_64-linux-gnu.so
+7f995fbc9000-7f995fbe6000 rw-p 0038b000 08:04 40656357                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/core/_multiarray_umath.cpython-36m-x86_64-linux-gnu.so
+7f995fbe6000-7f995fc07000 rw-p 00000000 00:00 0 
+7f995fc07000-7f995fc0e000 rw-p 003f3000 08:04 40656357                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/numpy/core/_multiarray_umath.cpython-36m-x86_64-linux-gnu.so
+7f995fc0e000-7f995fc8e000 rw-p 00000000 00:00 0 
+7f995fc97000-7f995fd17000 rw-p 00000000 00:00 0 
+7f995fd17000-7f995fd1e000 r-xp 00000000 08:02 792103                     /usr/lib/x86_64-linux-gnu/libffi.so.6.0.4
+7f995fd1e000-7f995ff1d000 ---p 00007000 08:02 792103                     /usr/lib/x86_64-linux-gnu/libffi.so.6.0.4
+7f995ff1d000-7f995ff1e000 r--p 00006000 08:02 792103                     /usr/lib/x86_64-linux-gnu/libffi.so.6.0.4
+7f995ff1e000-7f995ff1f000 rw-p 00007000 08:02 792103                     /usr/lib/x86_64-linux-gnu/libffi.so.6.0.4
+7f995ff1f000-7f995ff3a000 r-xp 00000000 08:02 678595                     /usr/lib/python3.6/lib-dynload/_ctypes.cpython-36m-x86_64-linux-gnu.so
+7f995ff3a000-7f9960139000 ---p 0001b000 08:02 678595                     /usr/lib/python3.6/lib-dynload/_ctypes.cpython-36m-x86_64-linux-gnu.so
+7f9960139000-7f996013a000 r--p 0001a000 08:02 678595                     /usr/lib/python3.6/lib-dynload/_ctypes.cpython-36m-x86_64-linux-gnu.so
+7f996013a000-7f996013e000 rw-p 0001b000 08:02 678595                     /usr/lib/python3.6/lib-dynload/_ctypes.cpython-36m-x86_64-linux-gnu.so
+7f996013e000-7f99601fe000 rw-p 00000000 00:00 0 
+7f99601fe000-7f9960bbd000 r--p 00000000 08:02 789793                     /usr/lib/locale/locale-archive
+7f9960bbd000-7f9960bd3000 r-xp 00000000 08:02 527514                     /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f9960bd3000-7f9960dd2000 ---p 00016000 08:02 527514                     /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f9960dd2000-7f9960dd3000 rw-p 00015000 08:02 527514                     /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f9960dd3000-7f9960edb000 r-xp 00000000 08:02 527546                     /lib/x86_64-linux-gnu/libm-2.23.so
+7f9960edb000-7f99610da000 ---p 00108000 08:02 527546                     /lib/x86_64-linux-gnu/libm-2.23.so
+7f99610da000-7f99610db000 r--p 00107000 08:02 527546                     /lib/x86_64-linux-gnu/libm-2.23.so
+7f99610db000-7f99610dc000 rw-p 00108000 08:02 527546                     /lib/x86_64-linux-gnu/libm-2.23.so
+7f99610dc000-7f99610de000 r-xp 00000000 08:02 527657                     /lib/x86_64-linux-gnu/libutil-2.23.so
+7f99610de000-7f99612dd000 ---p 00002000 08:02 527657                     /lib/x86_64-linux-gnu/libutil-2.23.so
+7f99612dd000-7f99612de000 r--p 00001000 08:02 527657                     /lib/x86_64-linux-gnu/libutil-2.23.so
+7f99612de000-7f99612df000 rw-p 00002000 08:02 527657                     /lib/x86_64-linux-gnu/libutil-2.23.so
+7f99612df000-7f99612e2000 r-xp 00000000 08:02 527500                     /lib/x86_64-linux-gnu/libdl-2.23.so
+7f99612e2000-7f99614e1000 ---p 00003000 08:02 527500                     /lib/x86_64-linux-gnu/libdl-2.23.so
+7f99614e1000-7f99614e2000 r--p 00002000 08:02 527500                     /lib/x86_64-linux-gnu/libdl-2.23.so
+7f99614e2000-7f99614e3000 rw-p 00003000 08:02 527500                     /lib/x86_64-linux-gnu/libdl-2.23.so
+7f99614e3000-7f99614fb000 r-xp 00000000 08:02 527622                     /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f99614fb000-7f99616fa000 ---p 00018000 08:02 527622                     /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f99616fa000-7f99616fb000 r--p 00017000 08:02 527622                     /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f99616fb000-7f99616fc000 rw-p 00018000 08:02 527622                     /lib/x86_64-linux-gnu/libpthread-2.23.so
+7f99616fc000-7f9961700000 rw-p 00000000 00:00 0 
+7f9961700000-7f9961719000 r-xp 00000000 08:02 527667                     /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f9961719000-7f9961918000 ---p 00019000 08:02 527667                     /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f9961918000-7f9961919000 r--p 00018000 08:02 527667                     /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f9961919000-7f996191a000 rw-p 00019000 08:02 527667                     /lib/x86_64-linux-gnu/libz.so.1.2.8
+7f996191a000-7f9961940000 r-xp 00000000 08:02 527507                     /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7f9961940000-7f9961b40000 ---p 00026000 08:02 527507                     /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7f9961b40000-7f9961b42000 r--p 00026000 08:02 527507                     /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7f9961b42000-7f9961b43000 rw-p 00028000 08:02 527507                     /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7f9961b43000-7f9961d03000 r-xp 00000000 08:02 527476                     /lib/x86_64-linux-gnu/libc-2.23.so
+7f9961d03000-7f9961f03000 ---p 001c0000 08:02 527476                     /lib/x86_64-linux-gnu/libc-2.23.so
+7f9961f03000-7f9961f07000 r--p 001c0000 08:02 527476                     /lib/x86_64-linux-gnu/libc-2.23.so
+7f9961f07000-7f9961f09000 rw-p 001c4000 08:02 527476                     /lib/x86_64-linux-gnu/libc-2.23.so
+7f9961f09000-7f9961f0d000 rw-p 00000000 00:00 0 
+7f9961f0d000-7f996207f000 r-xp 00000000 08:02 792886                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7f996207f000-7f996227f000 ---p 00172000 08:02 792886                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7f996227f000-7f9962289000 r--p 00172000 08:02 792886                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7f9962289000-7f996228b000 rw-p 0017c000 08:02 792886                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.21
+7f996228b000-7f996228f000 rw-p 00000000 00:00 0 
+7f996228f000-7f99626b5000 r-xp 00000000 08:02 781929                     /usr/lib/x86_64-linux-gnu/libpython3.6m.so.1.0
+7f99626b5000-7f99628b5000 ---p 00426000 08:02 781929                     /usr/lib/x86_64-linux-gnu/libpython3.6m.so.1.0
+7f99628b5000-7f99628b9000 r--p 00426000 08:02 781929                     /usr/lib/x86_64-linux-gnu/libpython3.6m.so.1.0
+7f99628b9000-7f9962956000 rw-p 0042a000 08:02 781929                     /usr/lib/x86_64-linux-gnu/libpython3.6m.so.1.0
+7f9962956000-7f9962987000 rw-p 00000000 00:00 0 
+7f9962987000-7f99629ad000 r-xp 00000000 08:02 527448                     /lib/x86_64-linux-gnu/ld-2.23.so
+7f99629b6000-7f9962a1d000 rw-p 00000000 00:00 0 
+7f9962a3a000-7f9962a42000 rw-s 00000000 08:02 537685                     /tmp/hsperfdata_tangsong/7583
+7f9962a42000-7f9962b8a000 rw-p 00000000 00:00 0 
+7f9962b8a000-7f9962b8b000 r--p 00000000 00:00 0 
+7f9962b8b000-7f9962b8c000 rw-p 00000000 00:00 0 
+7f9962b8c000-7f9962b8d000 r--p 00000000 00:00 0 
+7f9962b8d000-7f9962ba1000 r-xp 00000000 08:04 43386792                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/tensorflow/python/framework/fast_tensor_util.so
+7f9962ba1000-7f9962ba2000 r--p 00013000 08:04 43386792                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/tensorflow/python/framework/fast_tensor_util.so
+7f9962ba2000-7f9962ba4000 rw-p 00014000 08:04 43386792                   /home/tangsong/Projects/tree_mutation/venv/lib/python3.6/site-packages/tensorflow/python/framework/fast_tensor_util.so
+7f9962ba4000-7f9962ba5000 rwxp 00000000 00:00 0 
+7f9962ba5000-7f9962bac000 r--s 00000000 08:02 913230                     /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7f9962bac000-7f9962bad000 r--p 00025000 08:02 527448                     /lib/x86_64-linux-gnu/ld-2.23.so
+7f9962bad000-7f9962bae000 rw-p 00026000 08:02 527448                     /lib/x86_64-linux-gnu/ld-2.23.so
+7f9962bae000-7f9962baf000 rw-p 00000000 00:00 0 
+7fffb50d4000-7fffb50d7000 ---p 00000000 00:00 0 
+7fffb50d7000-7fffb51d4000 rw-p 00000000 00:00 0                          [stack]
+7fffb51f9000-7fffb51fc000 r--p 00000000 00:00 0                          [vvar]
+7fffb51fc000-7fffb51fe000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+java_command: <unknown>
+java_class_path (initial): /home/tangsong/CLionProjects/InvokeDDPGtest/AT1.jar
+Launcher Type: generic
+
+Environment Variables:
+JAVA_HOME=/usr/local/bin/jdk1.8.0_261
+JRE_HOME=/usr/local/bin/jdk1.8.0_261/jre
+CLASSPATH=.:/usr/local/bin/antlr-4.7.1-complete.jar:
+PATH=/home/tangsong/Projects/tree_mutation/venv/bin:/usr/local/bin/jdk1.8.0_261/bin:/home/tangsong/bin:/home/tangsong/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+USERNAME=tangsong
+SHELL=/bin/bash
+DISPLAY=:1
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xade140], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xade140], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0x912c70], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0x912c70], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0x912c70], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0x912c70], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0x912b40], sa_mask[0]=00100000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0x913160], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0x913160], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0x913160], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0x913160], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=16.04
+DISTRIB_CODENAME=xenial
+DISTRIB_DESCRIPTION="Ubuntu 16.04.7 LTS"
+
+uname:Linux 4.15.0-112-generic #113~16.04.1-Ubuntu SMP Fri Jul 10 04:37:08 UTC 2020 x86_64
+libc:glibc 2.23 NPTL 2.23 
+rlimit: STACK 8192k, CORE 0k, NPROC 30895, NOFILE 1048576, AS infinity
+load average:0.84 0.78 0.96
+
+/proc/meminfo:
+MemTotal:        8018936 kB
+MemFree:          134868 kB
+MemAvailable:    2519036 kB
+Buffers:           75788 kB
+Cached:          2745376 kB
+SwapCached:        36776 kB
+Active:          5969272 kB
+Inactive:        1543072 kB
+Active(anon):    4176736 kB
+Inactive(anon):   782600 kB
+Active(file):    1792536 kB
+Inactive(file):   760472 kB
+Unevictable:          16 kB
+Mlocked:              16 kB
+SwapTotal:      15998972 kB
+SwapFree:       15237616 kB
+Dirty:              2336 kB
+Writeback:             0 kB
+AnonPages:       4666992 kB
+Mapped:           567332 kB
+Shmem:            268156 kB
+Slab:             177356 kB
+SReclaimable:     110648 kB
+SUnreclaim:        66708 kB
+KernelStack:       19344 kB
+PageTables:        64912 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    20008440 kB
+Committed_AS:   11596296 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:           0 kB
+VmallocChunk:          0 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+CmaTotal:              0 kB
+CmaFree:               0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:      742600 kB
+DirectMap2M:     7497728 kB
+DirectMap1G:           0 kB
+
+container (cgroup) information:
+container_type: cgroupv1
+cpu_cpuset_cpus: 0-7
+cpu_memory_nodes: 0
+active_processor_count: 8
+cpu_quota: -1
+cpu_period: 100000
+cpu_shares: -1
+memory_limit_in_bytes: -1
+memory_and_swap_limit_in_bytes: -2
+memory_soft_limit_in_bytes: -1
+memory_usage_in_bytes: 7692234752
+memory_max_usage_in_bytes: 0
+
+
+CPU:total 8 (initial active 8) (8 cores per cpu, 1 threads per core) family 6 model 158 stepping 13, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, tsc, tscinvbit, bmi1, bmi2, adx
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i7-9700F CPU @ 3.00GHz
+stepping	: 13
+microcode	: 0xd6
+cpu MHz		: 1478.936
+cache size	: 12288 KB
+physical id	: 0
+siblings	: 8
+core id		: 0
+cpu cores	: 8
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs taa itlb_multihit srbds
+bogomips	: 6000.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i7-9700F CPU @ 3.00GHz
+stepping	: 13
+microcode	: 0xd6
+cpu MHz		: 1552.155
+cache size	: 12288 KB
+physical id	: 0
+siblings	: 8
+core id		: 1
+cpu cores	: 8
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs taa itlb_multihit srbds
+bogomips	: 6000.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i7-9700F CPU @ 3.00GHz
+stepping	: 13
+microcode	: 0xd6
+cpu MHz		: 1493.394
+cache size	: 12288 KB
+physical id	: 0
+siblings	: 8
+core id		: 2
+cpu cores	: 8
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs taa itlb_multihit srbds
+bogomips	: 6000.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i7-9700F CPU @ 3.00GHz
+stepping	: 13
+microcode	: 0xd6
+cpu MHz		: 1292.623
+cache size	: 12288 KB
+physical id	: 0
+siblings	: 8
+core id		: 3
+cpu cores	: 8
+apicid		: 6
+initial apicid	: 6
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs taa itlb_multihit srbds
+bogomips	: 6000.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 4
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i7-9700F CPU @ 3.00GHz
+stepping	: 13
+microcode	: 0xd6
+cpu MHz		: 949.346
+cache size	: 12288 KB
+physical id	: 0
+siblings	: 8
+core id		: 4
+cpu cores	: 8
+apicid		: 8
+initial apicid	: 8
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs taa itlb_multihit srbds
+bogomips	: 6000.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 5
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i7-9700F CPU @ 3.00GHz
+stepping	: 13
+microcode	: 0xd6
+cpu MHz		: 1219.936
+cache size	: 12288 KB
+physical id	: 0
+siblings	: 8
+core id		: 5
+cpu cores	: 8
+apicid		: 10
+initial apicid	: 10
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs taa itlb_multihit srbds
+bogomips	: 6000.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 6
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i7-9700F CPU @ 3.00GHz
+stepping	: 13
+microcode	: 0xd6
+cpu MHz		: 932.310
+cache size	: 12288 KB
+physical id	: 0
+siblings	: 8
+core id		: 6
+cpu cores	: 8
+apicid		: 12
+initial apicid	: 12
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs taa itlb_multihit srbds
+bogomips	: 6000.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+processor	: 7
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 158
+model name	: Intel(R) Core(TM) i7-9700F CPU @ 3.00GHz
+stepping	: 13
+microcode	: 0xd6
+cpu MHz		: 905.736
+cache size	: 12288 KB
+physical id	: 0
+siblings	: 8
+core id		: 7
+cpu cores	: 8
+apicid		: 14
+initial apicid	: 14
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 22
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow vnmi flexpriority ept vpid fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid mpx rdseed adx smap clflushopt intel_pt xsaveopt xsavec xgetbv1 xsaves dtherm ida arat pln pts hwp hwp_notify hwp_act_window hwp_epp md_clear flush_l1d arch_capabilities
+bugs		: spectre_v1 spectre_v2 spec_store_bypass swapgs taa itlb_multihit srbds
+bogomips	: 6000.00
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 39 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 8018936k(134772k free), swap 15998972k(15237616k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.261-b12) for linux-amd64 JRE (1.8.0_261-b12), built on Jun 17 2020 23:41:40 by "java_re" with gcc 7.3.0
+
+time: Mon Oct 12 22:15:34 2020
+timezone: CST
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
