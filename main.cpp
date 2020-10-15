@@ -29,11 +29,13 @@ int main() {
 //    DDPG agent = DDPG();
     Py_Initialize();
     PyRun_SimpleString("import sys");
-    PyRun_SimpleString("sys.path.append('/home/tangsong/Projects/tbcnn_-master')");
-    PyObject *rM = PyImport_ImportModule("sampleJS");
-//    PyObject *rMm = PyModule_GetDict(rM);
-//    PyObject *f2v = PyDict_GetItemString(rMm,"fileString_convert_vector");
-//    PyObject_CallFunction(f2v,"s","/home/tangsong/CLionProjects/InvokeDDPGtest/tbcnn_-master/test.js");
+    PyRun_SimpleString("sys.path.append('/home/tangsong/Projects/tbcnn-terminal')");
+    PyObject *rM = PyImport_ImportModule("restore_model");
+    if(!rM) printf("rm not found");
+    PyObject *rMm = PyModule_GetDict(rM);
+    PyObject *f2v = PyDict_GetItemString(rMm,"fileString_convert_vector");
+    if(!f2v) printf("method not found");
+    PyObject_CallFunction(f2v,"s","/home/tangsong/CLionProjects/InvokeDDPGtest/test.js");
     Py_Finalize();
     return 0;
 }
