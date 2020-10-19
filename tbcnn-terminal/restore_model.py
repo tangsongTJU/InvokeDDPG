@@ -8,18 +8,19 @@ from parameters import EPOCHS, LEARN_RATE
 # 加载模型
 sess = tf.Session()
 # get_tree("/home/tangsong/CLionProjects/InvokeDDPGtest/test.js")
-saver = tf.train.import_meta_graph("/home/tangsong/Projects/tbcnn-terminal/model_o/model.ckpt.meta")
-saver.restore(sess, tf.train.latest_checkpoint("/home/tangsong/Projects/tbcnn-terminal/model_o"))
-#
+current_path = os.getcwd()
+saver = tf.train.import_meta_graph("/home/tangsong/CLionProjects/InvokeDDPGtest/tbcnn-terminal/model_o/model.ckpt.meta")
+saver.restore(sess, tf.train.latest_checkpoint("/home/tangsong/CLionProjects/InvokeDDPGtest/tbcnn-terminal/model_o"))
+# #
 # 需要用到的参数，需要从池化层得到向量
 graph = tf.get_default_graph()
 nodes_node1 = graph.get_tensor_by_name("inputs/tree:0")
 children_node1 = graph.get_tensor_by_name("inputs/children:0")
 pool_out = graph.get_tensor_by_name("network/pooling/Max:0")
-
+#
 # 获得embedding索引表
 embeddings_index = {}
-fz = open("/home/tangsong/Projects/tbcnn-terminal/new 1.txt", 'r')
+fz = open("/home/tangsong/CLionProjects/InvokeDDPGtest/tbcnn-terminal/new 1.txt", 'r')
 line = "123"
 listchar = []
 while line:
@@ -47,10 +48,9 @@ def fileString_convert_vector(file_path_name):
                         children_node1: children1,
                     }
                 )
-    print(out_put)
     return out_put
 
 
 # # def test():
-# fileString_convert_vector('/home/tangsong/CLionProjects/InvokeDDPGtest/test.js')
+# print(len(fileString_convert_vector('/home/tangsong/CLionProjects/InvokeDDPGtest/test.js')[0][0]))
 

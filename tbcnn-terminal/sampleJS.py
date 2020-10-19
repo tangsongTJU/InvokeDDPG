@@ -1,4 +1,6 @@
 import subprocess
+import os
+current_path = os.getcwd()
 class Node:
     def __init__(self,type_,L,R,id,le):
         self.type_ = type_
@@ -113,7 +115,7 @@ def getData_finetune_withoutlabel(l,dictt,embeddings):
 
 def get_tree(file_name):
     print(file_name)
-    p = subprocess.Popen("java -jar /home/tangsong/Projects/tbcnn-terminal/AT1.jar "+file_name,shell=True,stdout=subprocess.PIPE)
+    p = subprocess.Popen("java -jar /home/tangsong/CLionProjects/InvokeDDPGtest/tbcnn-terminal/AT1.jar "+file_name,shell=True,stdout=subprocess.PIPE)
     text = str(p.stdout.read(),encoding = "utf-8")
     p.wait()
     # execute_file_name = "D:/datasetforTBCCD-master/Graduate_experiment-master/opo_js/test_target_file2/"+file_name+".txt"

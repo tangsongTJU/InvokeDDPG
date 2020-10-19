@@ -6,14 +6,14 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
-
+from restore_model import fileString_convert_vector
 # from tensorboardX import SummaryWriter
 
 # arguments
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 capacity=1000000
-state_dim = 200
-action_dim = 200
+state_dim = 600
+action_dim = 600
 max_action = 2.0
 min_Val = torch.tensor(1e-7).float().to(device) # min value
 
@@ -94,7 +94,7 @@ class Critic(nn.Module):
         return x
 
 class DDPG(object):
-    def __init__(self, state_dim, action_dim, max_action):
+    def __init__(self):
         #initialize actor
         self.actor = Actor(state_dim, action_dim, max_action).to(device)
         self.actor_target = Actor(state_dim, action_dim, max_action).to(device)
@@ -113,8 +113,24 @@ class DDPG(object):
         self.num_actor_update_iteration = 0
         self.num_training = 0
 
-    def select_action(self, state):
-        state = torch.FloatTensor(state.reshape(1, -1)).to(device)
+        #initialize the file_vector
+        self.s0 =[]
+
+    def get_s0(self):
+        list = fileString_convert_vector("/home/tangsong/CLionProjects/InvokeDDPGtest/test.js")
+        self.s0 = list[0][0]
+        print("get s0 -----------------------------------------------")
+
+    def match(self,list1):
+        len = len(list1)
+
+
+
+
+    def select_action(self):
+        state = torch.FloatTensor(self.s0.reshape(1, -1)).to(device)
+        # print(self.actor(state))
+        print(self.actor(state).cpu().data.numpy().flatten())
         return self.actor(state).cpu().data.numpy().flatten()
 
     def update(self):
