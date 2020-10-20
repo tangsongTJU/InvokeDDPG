@@ -7,13 +7,14 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
 from restore_model import fileString_convert_vector
+import pickle
 # from tensorboardX import SummaryWriter
 
 # arguments
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 capacity=1000000
 state_dim = 600
-action_dim = 600
+action_dim = 200
 max_action = 2.0
 min_Val = torch.tensor(1e-7).float().to(device) # min value
 
@@ -28,6 +29,16 @@ seed=False
 random_seed=9527
 
 max_episode=100000
+dict ={}
+with open("/home/tangsong/CLionProjects/InvokeDDPGtest/file:vec.pickle",'rb') as f:
+    dict = pickle.load(f)
+
+
+def cal_dis(list1,list2):
+    sum =0
+    for i in range(len(list1)):
+        sum = sum + (list1[i] - list2[i])**2
+    return sum
 
 class Replay_buffer():
     '''
@@ -115,22 +126,40 @@ class DDPG(object):
 
         #initialize the file_vector
         self.s0 =[]
+        self.a0 =[]
+        self.s1=[]
+        self.reward =0
 
     def get_s0(self):
         list = fileString_convert_vector("/home/tangsong/CLionProjects/InvokeDDPGtest/test.js")
         self.s0 = list[0][0]
         print("get s0 -----------------------------------------------")
 
-    def match(self,list1):
-        len = len(list1)
+    def match(self):
+        print("match-----------------------")
+        max =0
+        file_path=""
+        for key,value in dict.items():
+            dis = cal_dis(self.a0.tolist(),value)
+            if dis > max:
+                max = dis
+                file_path = key
+        # print(file_path)
+        with open("new_file.txt",'w') as f:
+            f.write(file_path)
+            f.close()
 
-
+    def get_s1(self):
+        list = fileString_convert_vector("/home/tangsong/CLionProjects/InvokeDDPGtest/test.js")
+        self.s1 = list[0][0]
+        print("get s1 -----------------------------------------------")
 
 
     def select_action(self):
+        print('------action-------')
         state = torch.FloatTensor(self.s0.reshape(1, -1)).to(device)
         # print(self.actor(state))
-        print(self.actor(state).cpu().data.numpy().flatten())
+        self.a0 = self.actor(state).cpu().data.numpy().flatten()
         return self.actor(state).cpu().data.numpy().flatten()
 
     def update(self):
@@ -178,18 +207,21 @@ class DDPG(object):
             self.num_critic_update_iteration += 1
 
     def save(self):
-        torch.save(self.actor.state_dict(), '/home/tangsong/PycharmProjects/DDPG/' + 'actor.pth')
-        torch.save(self.critic.state_dict(),'/home/tangsong/PycharmProjects/DDPG/' + 'critic.pth')
+        torch.save(self.actor.state_dict(), '/home/tangsong/CLionProjects/InvokeDDPGtest' + 'actor.pth')
+        torch.save(self.critic.state_dict(),'/home/tangsong/CLionProjects/InvokeDDPGtest' + 'critic.pth')
         # print("====================================")
         # print("Model has been saved...")
         # print("====================================")
 
     def load(self):
-        self.actor.load_state_dict(torch.load('/home/tangsong/PycharmProjects/DDPG/' + 'actor.pth'))
-        self.critic.load_state_dict(torch.load('/home/tangsong/PycharmProjects/DDPG/' + 'critic.pth'))
+        self.actor.load_state_dict(torch.load('/home/tangsong/CLionProjects/InvokeDDPGtest' + 'actor.pth'))
+        self.critic.load_state_dict(torch.load('/home/tangsong/CLionProjects/InvokeDDPGtest' + 'critic.pth'))
         print("====================================")
         print("model has been loaded...")
         print("====================================")
 
-def main():
-    print("main")
+# agent = DDPG()
+# agent.get_s0()
+# agent.select_action()
+# file_path = agent.match()
+# print(file_path)
